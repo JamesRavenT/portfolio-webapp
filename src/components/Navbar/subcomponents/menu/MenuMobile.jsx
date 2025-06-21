@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion } from 'framer-motion'
+import MenuItems from "./fragments/MenuItems"
 
 export default function MobileMenu(){
     const [isOpen, setIsOpen]= useState(false)
@@ -8,23 +9,20 @@ export default function MobileMenu(){
         setIsOpen(!isOpen)
     }
     return(
-        <>
+        <div>
             <button
             className='z-[999] relative'
             onClick={toggleDrawer}>
                 {isOpen ? <X /> : <Menu />} 
             </button>
             <motion.div 
-            initial={{ x: '-100%' }}
-            animate={{ x: isOpen? '0%' : '-100%'}} 
-            className='fixed left-0 right-0 top-16 overflow-y-auto h-full'>
-                <ul>
-                    <li>TEST</li>
-                    <li>TEST</li>
-                    <li>TEST</li>
-                    <li>TEST</li>
-                </ul>
+                initial={{ x: '-100%' }}
+                animate={{ x: isOpen? '0%' : '-100%'}} 
+                className='fixed left-0 right-0 top-16 overflow-y-auto h-full'>
+                    <ul>
+                       {<MenuItems />} 
+                    </ul>
             </motion.div>
-        </>
+        </div>
     )
 }

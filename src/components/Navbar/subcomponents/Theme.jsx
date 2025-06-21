@@ -7,9 +7,9 @@ export default function Theme() {
     }
     return(
         <>
-         <button
-            className='z-[999] relative'
-            onClick={toggleTheme}>
+            <button
+                className='z-[999] relative'
+                onClick={toggleTheme}>
                 {isDark ? <Sun /> : <Moon />} 
             </button>   
         </>
