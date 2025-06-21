@@ -1,17 +1,14 @@
 import {Sun, Moon} from 'lucide-react'
-import { useState } from 'react'
-export default function Theme() {
-    const[isDark, setTheme] = useState(false)
-    const toggleTheme = () => {
-        setTheme(!isDark)
-    }
+
+export default function Theme({theme, toggle}) {
+
     return(
-        <>
+        <div className='flex ml-auto lg:w-10 items-center'>
             <button
-                className='z-[999] relative'
-                onClick={toggleTheme}>
-                {isDark ? <Sun /> : <Moon />} 
+                className='flex z-[999] relative'
+                onClick={toggle}>
+                {theme == 'Dark' ? <Sun /> : <Moon />} 
             </button>   
-        </>
+        </div>
     )
 }

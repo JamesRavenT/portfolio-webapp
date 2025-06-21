@@ -1,7 +1,7 @@
 export default function Home(){
     return(
-        <div className=' w-screen flex-col bg-[#fff]'>
-            <div className='flex h-30 w-screen content-center items-center bg-[#000000]'>
+        <div className=' w-screen flex-col'>
+            <div className='flex h-30 w-screen content-center items-center'>
                 HOMEPAGE
             </div>
         </div>

@@ -1,8 +1,10 @@
-import MenuItems from "./fragments/MenuItems";
+import MenuItems from "./fragments/MenuItems"
+// import { dark, light } from "../../../../assets/themes/colors"
 
-export default function DesktopMenu(){
+export default function DesktopMenu({theme}){
+    
     return(
-        <div>
+        <div className={`hidden lg:flex flex-grow justify-center `}>
             <div className='flex h-16'>
                 <ul className='flex items-center gap-x-5'>
                 <MenuItems />
