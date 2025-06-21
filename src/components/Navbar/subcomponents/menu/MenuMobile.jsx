@@ -19,7 +19,7 @@ export default function MobileMenu(){
                 initial={{ x: '-100%' }}
                 animate={{ x: isOpen? '0%' : '-100%'}} 
                 className='fixed left-0 right-0 top-16 overflow-y-auto h-full'>
-                    <ul>
+                    <ul className='flex-col h-screen w-screen text-center space-y-5 bg-[#000000e1]'>
                        {<MenuItems />} 
                     </ul>
             </motion.div>

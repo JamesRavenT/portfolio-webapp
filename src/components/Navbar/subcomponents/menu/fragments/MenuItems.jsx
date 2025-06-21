@@ -1,9 +1,23 @@
+import { Link } from "react-router-dom"
+
 export default function MenuItems(){
     return (
         <>
-            <li>About Me</li>
-            <li>Skills</li>
-            <li>Projects</li>
+            <li>
+                <Link to ='/'>
+                <button>Home</button>
+                </Link>
+            </li>
+            <li>
+                <Link to ='/'>
+                <button>Skills</button>
+                </Link>
+            </li>
+            <li>
+                <Link to ='/projects'>
+                <button>Projects</button>
+                </Link>
+            </li>
         </>
     )
 }
