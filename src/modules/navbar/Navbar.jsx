@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom'
 
-import DesktopMenu from './subcomponents/menu/MenuDesktop'
-import MobileMenu from './subcomponents/menu/MenuMobile'
-import Theme from './subcomponents/Theme'
-import Logo from './subcomponents/Logo'
+import DesktopMenu from './components/menu/MenuDesktop'
+import MobileMenu from './components/menu/MenuMobile'
+import Theme from './components/Theme'
+import Logo from './components/Logo'
 import { Dark, Light } from '../../assets/themes/colors'
 
 
@@ -11,9 +11,9 @@ export default function Navbar({theme, toggle}){
     let bgColor = theme === 'Dark' ? Dark : Light
     let txtColor = theme === 'Dark' ? Light : Dark
     return(
-        <div style={{backgroundColor: bgColor, color:txtColor}}>
-            <div className='h-16 w-screen sticky flex inset-0'>
-                <nav className='flex mx-auto px-3.5 w-screen content-center gap-x-2'>
+        <div style={{backgroundColor: bgColor, color:txtColor}} className='w-[98.80%]' >
+            <div className='h-16 w-full sticky flex'>
+                <nav className='flex mx-auto px-3.5 w-screen gap-x-2'>
                     <Logo />
                     <MobileMenu theme={theme}/>
                     <DesktopMenu theme={theme}/>

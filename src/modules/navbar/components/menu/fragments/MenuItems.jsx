@@ -4,12 +4,12 @@ export default function MenuItems(){
     return (
         <>
             <li>
-                <Link to ='/'>
+                <Link to ='/home'>
                 <button>Home</button>
                 </Link>
             </li>
             <li>
-                <Link to ='/'>
+                <Link to ='/home'>
                 <button>Skills</button>
                 </Link>
             </li>

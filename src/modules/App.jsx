@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from '../pages/aboutme/AboutMe'
+import Home from '../pages/home/Home'
 import Projects from '../pages/projects/projects'
-import Navbar from './Navbar/Navbar'
+import Navbar from './navbar/Navbar'
 import SplashScreen from '../pages/splashscreen/SplashScreen'
 
 export default function App() {

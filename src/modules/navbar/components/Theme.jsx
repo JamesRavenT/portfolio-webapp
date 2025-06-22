@@ -7,7 +7,7 @@ export default function Theme({theme, toggle}) {
             <button
                 className='flex z-[999] relative'
                 onClick={toggle}>
-                {theme == 'Dark' ? <Sun /> : <Moon />} 
+                {theme == 'Dark' ? <Moon /> : <Sun />} 
             </button>   
         </div>
     )
