@@ -5,7 +5,8 @@ import Projects from '../pages/projects/projects'
 import Navbar from './navbar/Navbar'
 import SplashScreen from '../pages/splashscreen/SplashScreen'
 
-export default function App() {
+export default function App() {  
+  const [section, setSection] = useState('Home');
   const [isIntroDone, setState] = useState(false)
   const [theme, setTheme] = useState('Light')
   const toggle = () => {(theme == 'Dark') ? setTheme('Light') : setTheme('Dark') }
@@ -30,8 +31,8 @@ export default function App() {
         {!isIntroDone ? (
           <Route path='/' element={<SplashScreen onDone={() => setState(true)} />} />
         ) : (
-          <Route element={<Navbar theme={theme} toggle={toggle} />}>
-            <Route path='/home' element={<Home theme={theme} />} />
+          <Route element={<Navbar theme={theme} toggle={toggle} section={section}/>}>
+            <Route path='/home' element={<Home theme={theme} setSection={setSection}/>} />
             <Route path='/projects' element={<Projects theme={theme} />} />
           </Route>
         )}
