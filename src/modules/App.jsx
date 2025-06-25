@@ -6,7 +6,7 @@ import Navbar from './navbar/Navbar'
 import SplashScreen from '../pages/splashscreen/SplashScreen'
 
 export default function App() {  
-  const [section, setSection] = useState('Home');
+  const [section, setSection] = useState('');
   const [isIntroDone, setState] = useState(false)
   const [theme, setTheme] = useState('Light')
   const toggle = () => {(theme == 'Dark') ? setTheme('Light') : setTheme('Dark') }

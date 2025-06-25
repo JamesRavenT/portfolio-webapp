@@ -1,9 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 @theme{ --font-oxanium: 'Oxanium', sans-serif; }
 @theme{ --font-saira: 'Saira Semi Condensed', sans-serif; }
+@theme{ --font-orbitron: 'Orbitron', sans-serif }
+@theme{ --font-electrolize: 'Electrolize', sans-serif }
+
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 
 @import "tailwindcss";
 
@@ -14,7 +25,7 @@
   
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,12 +43,21 @@ body {
 
 }
 
+/* ANIMATIONS */
+@theme {
+    --animate-hint : hint 1.5s infinite;
 
-@keyframes blink {
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+    @keyframes hint {
+      0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+      50% {
+        opacity: 0.5;
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
 }
+
+

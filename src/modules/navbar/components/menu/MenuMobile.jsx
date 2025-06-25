@@ -13,15 +13,15 @@ export default function MobileMenu({theme}){
         setIsOpen(!isOpen)
     }
     return(
-        <div className='lg:hidden flex items-center gap-x-2'>
+        <div className='lg:hidden flex ml-auto items-center gap-x-2'>
             <button
             className='z-[999] relative'
             onClick={toggleDrawer}>
                 {isOpen ? <X /> : <Menu />} 
             </button>
             <motion.div 
-                initial={{ x: '-100%' }}
-                animate={{ x: isOpen? '0%' : '-100%'}} 
+                initial={{ x: '100%' }}
+                animate={{ x: isOpen? '0%' : '100%'}} 
                 className='fixed left-0 right-0 top-16 overflow-y-auto h-full'>
                     <ul className='flex-col h-screen w-screen text-center space-y-5'>
                        {<MenuItems />} 

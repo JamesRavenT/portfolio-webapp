@@ -1,12 +1,13 @@
+import { Diamond } from 'lucide-react'
 import placeholder from '../../../assets/icons/placeholder.png'
 
-export default function Logo() {
+export default function Logo({section}) {
 
       const logo = placeholder
     return(
         <>
-        <div className='hidden lg:flex w-15 size-fit items-center'>
-            <img src={logo} alt='icon'/>
+        <div className={`${ section != 'Top' ? 'flex justify-center items-center' : 'hidden' }`}>
+            <Diamond />
         </div>
         </>
         
