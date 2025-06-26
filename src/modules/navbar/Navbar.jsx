@@ -17,7 +17,7 @@ export default function Navbar({theme, toggle, section}){
     }
     return(
         <div style={style} className='w-full ' >
-            <div className='h-18 w-full sticky flex'>
+            <div className='flex h-25 w-full sticky top-0 z-50'>
                 <nav className='flex mx-auto px-3.5 w-screen gap-x-2'>
                     {section !== '' && <Logo section={section} />}
                     <Navtext section={section}/>
