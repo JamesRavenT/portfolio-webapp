@@ -1,11 +1,18 @@
+import { Square } from 'lucide-react'
 import { AboutMe } from "../../../assets/text/home"
+import WebDev from './fragments/techstack/webdev'
 
 export default function Skills(){
     return(
-         <div className='flex flex-col p-2.5 w-[95%] gap-y-2 h-full'>
-            <p className='text-3xl text-ce'>{AboutMe.cat}</p>
-            <div className='h-0.5 w-full justify-center items-center border-1' />
-            <p className='text-2xs text-justify'>{AboutMe.txt}</p>
+        <div className='flex flex-col items-center min-h-[90vh] w-full pt-28 gap-y-2 font-electrolize'>   
+            <div className='flex w-full items-center gap-x-2'> 
+                <hr className='h-[10%] w-[25%] border-1' />
+                <Square className='size-3'/>
+                <p>
+                Fortes
+                </p>
+            </div>
+            <WebDev />
         </div>
     )
 }

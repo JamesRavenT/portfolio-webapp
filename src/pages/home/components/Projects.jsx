@@ -1,10 +1,16 @@
+import { Square } from 'lucide-react'
 import { AboutMe } from "../../../assets/text/home"
 
 export default function Projects(){
     return(
-        <section id='projects' className='flex flex-col p-2.5 min-h-screen w-[95%] gap-y-2 snap-start'>
-            <p className='text-3xl text-ce'>{AboutMe.cat}</p>
-
-        </section>
+        <div className='flex flex-col items-center min-h-[90vh] w-full pt-28 gap-y-2 font-electrolize'>   
+            <div className='flex w-full items-center gap-x-2'> 
+                <hr className='h-[10%] w-[25%] border-1' />
+                <Square className='size-3'/>
+                <p>
+                    Projects
+                </p>
+            </div>
+        </div>
     )
 }

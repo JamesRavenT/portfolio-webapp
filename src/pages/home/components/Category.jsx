@@ -28,8 +28,8 @@ export default function Category({ section }) {
             transition={{ duration: 1, ease: 'easeOut' }}
             className='flex h-15 items-center justify-center text-center gap-x-1'
           >
-            <hr className='mr-auto w-[50%] border-1 origin-left ' />
-            <Diamond />
+            <hr className='mr-auto w-[60%] border-1 origin-left ' />
+       
             <AnimatePresence mode='wait'>
               <motion.p
                 key={section}
@@ -37,12 +37,12 @@ export default function Category({ section }) {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -10, opacity: 0 }}
                 transition={{ duration: 0.5, ease: 'easeOut' }}
-                className='w-25'
+                className='text-lg w-25 mx-5.5'
               >
-                {section}
+                {section.toUpperCase()}
               </motion.p>
             </AnimatePresence>
-            <Diamond className='mr-5.5'/>
+            
           </motion.div>
         )}
       </AnimatePresence>

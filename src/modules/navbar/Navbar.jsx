@@ -25,7 +25,7 @@ export default function Navbar({theme, toggle, section}){
 
                     
                     <MobileMenu theme={theme} section={section} />
-                    <Theme theme={theme} toggle={toggle} />
+                    {/* <Theme theme={theme} toggle={toggle} /> */}
                 </nav> 
             </div>
             
