@@ -1,13 +1,13 @@
-import {Sun, Moon} from 'lucide-react'
+import {Sparkle, Moon} from 'lucide-react'
 
 export default function Theme({theme, toggle}) {
 
     return(
-        <div className='hidden lg:flex ml-auto w-10 items-center'>
+        <div className='flex mr-2 items-center'>
             <button
                 className='flex z-[999] relative'
                 onClick={toggle}>
-                {theme == 'Dark' ? <Moon /> : <Sun />} 
+                {theme == 'Dark' ? <Moon /> : <Sparkle />} 
             </button>   
         </div>
     )

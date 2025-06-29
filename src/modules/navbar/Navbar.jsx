@@ -5,7 +5,7 @@ import MobileMenu from './components/menu/MenuMobile'
 import Theme from './components/Theme'
 import Logo from './components/Logo'
 import { Dark, Light } from '../../assets/variables/colors'
-import Navtext from './components/Navtext'
+
 
 
 export default function Navbar({theme, toggle, section}){
@@ -14,21 +14,26 @@ export default function Navbar({theme, toggle, section}){
                           'linear-gradient(to bottom right, #000000, #434343, #bdc3c7)' :
                           'linear-gradient(to bottom right, #ffffff, #bdc3c7, #434343)',
         color : (theme === 'Dark' ) ? Light : Dark
+        
     }
+
+    console.log(section)
     return(
         <div style={style} className='w-full ' >
             <div className='flex h-25 w-full sticky top-0 z-50'>
                 <nav className='flex mx-auto px-3.5 w-screen gap-x-2'>
-                    {section !== '' && <Logo section={section} />}
-                    <Navtext section={section}/>
+
+                    
+                    <MobileMenu theme={theme} section={section} />
                     <Theme theme={theme} toggle={toggle} />
-                    <MobileMenu theme={theme}/>
-                    {/* <DesktopMenu theme={theme}/> */}
                 </nav> 
             </div>
+            
             <main>
                 <Outlet />
             </main>  
         </div>    
     )
 }
+
+{/* <DesktopMenu theme={theme}/> */}

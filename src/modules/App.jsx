@@ -13,30 +13,38 @@ export default function App() {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
-    if(savedTheme === 'Dark' || savedTheme === 'Light'){
-      setTheme(savedTheme)
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-      setTheme(prefersDark ? 'Dark' : 'Light')
-    }
-  }, [])
+      if(savedTheme === 'Dark' || savedTheme === 'Light'){
+        setTheme(savedTheme)
+      } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        setTheme(prefersDark ? 'Dark' : 'Light')
+      }
+    }, [])
 
   useEffect(() => {
     localStorage.setItem('theme', theme)
   }, [theme])
 
   return (
-    <Router>
+      <Router>
       <Routes>
-        {!isIntroDone ? (
-          <Route path='/' element={<SplashScreen onDone={() => setState(true)} />} />
-        ) : (
-          <Route element={<Navbar theme={theme} toggle={toggle} section={section}/>}>
-            <Route path='/home' element={<Home theme={theme} setSection={setSection}/>} />
-            <Route path='/projects' element={<Projects theme={theme} />} />
-          </Route>
-        )}
+        <Route element={<Navbar theme={theme} toggle={toggle} section={section}/>}>
+          <Route path='/' element={<Home theme={theme} section={section} setSection={setSection}/>} />
+          <Route path='/projects' element={<Projects theme={theme} />} />
+        </Route>
       </Routes>
     </Router>
+    // <Router>
+    //   <Routes>
+    //     {!isIntroDone ? (
+    //       <Route path='/' element={<SplashScreen onDone={() => setState(true)} />} />
+    //     ) : (
+    //       <Route element={<Navbar theme={theme} toggle={toggle} section={section}/>}>
+    //         <Route path='/home' element={<Home theme={theme} setSection={setSection}/>} />
+    //         <Route path='/projects' element={<Projects theme={theme} />} />
+    //       </Route>
+    //     )}
+    //   </Routes>
+    // </Router>
   )
 }
