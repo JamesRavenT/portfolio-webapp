@@ -1,5 +1,6 @@
 import { Square } from 'lucide-react'
 import { AboutMe } from "../../../assets/text/home"
+import WebDev from './fragments/projects/ProjectTemplate'
 
 export default function Projects(){
     return(
@@ -8,9 +9,10 @@ export default function Projects(){
                 <hr className='h-[10%] w-[25%] border-1' />
                 <Square className='size-3'/>
                 <p>
-                    Projects
+                Fortes
                 </p>
             </div>
+            <WebDev />
         </div>
     )
 }

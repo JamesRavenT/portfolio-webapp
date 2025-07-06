@@ -30,7 +30,6 @@ export default function Category({ section }) {
           >
             <hr className='mr-auto w-[60%] border-1 origin-left ' />
        
-            <AnimatePresence mode='wait'>
               <motion.p
                 key={section}
                 initial={{ y: -10, opacity: 0 }}
@@ -41,7 +40,7 @@ export default function Category({ section }) {
               >
                 {section.toUpperCase()}
               </motion.p>
-            </AnimatePresence>
+          
             
           </motion.div>
         )}
