@@ -2,6 +2,7 @@ import { ChevronsDown, Diamond, ChartNoAxesGantt } from 'lucide-react'
 import { Front } from "../../../assets/text/home"
 import { githubICO, linkedinICO } from '../../../assets/icons/icons' 
 import { links } from '../../../assets/variables/links'
+
 export default function Frontpage() {
   const viewGithub = () => (window.location.href = links.github);
   const viewLinkedIn = () => (window.location.href = links.linkedin);
@@ -10,8 +11,18 @@ export default function Frontpage() {
   return (
     <div
       id="top"
-      className="flex items-center justify-center min-h-[90vh] w-full pt-20 px-1.5 font-electrolize"
+      className="flex items-center justify-center min-h-[100vh] w-full pt-20 px-1.5 text-white font-electrolize"
     >
+
+      <video
+        className="absolute top-0 left-0 w-full min-h-[105vh] object-cover z-[-1] blur-xs"
+        src='/backgrounds/frontpage.mp4'
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+
       <div className="flex flex-col w-[95%] ">
         <p className="text-3xl pl-1">{Front.greeting}</p>
         <p className="text-6xl font-bold">{Front.name}</p>

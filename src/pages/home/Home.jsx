@@ -5,7 +5,7 @@ import Skills from './components/Skills';
 import BasicInfo from './components/BasicInfo';
 import Category from './components/Category';
 
-export default function Home({ theme, section, setSection }) {
+export default function Home({ section, setSection }) {
 
   const topRef = useRef(null);
   const basicInfoRef = useRef(null);

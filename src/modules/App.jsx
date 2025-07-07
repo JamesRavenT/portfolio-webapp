@@ -7,30 +7,14 @@ import SplashScreen from '../pages/splashscreen/SplashScreen'
 
 export default function App() {  
   const [section, setSection] = useState('');
-  const [isIntroDone, setState] = useState(false)
-  const [theme, setTheme] = useState('Light')
-  const toggle = () => {(theme == 'Dark') ? setTheme('Light') : setTheme('Dark') }
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme')
-      if(savedTheme === 'Dark' || savedTheme === 'Light'){
-        setTheme(savedTheme)
-      } else {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-        setTheme(prefersDark ? 'Dark' : 'Light')
-      }
-    }, [])
-
-  useEffect(() => {
-    localStorage.setItem('theme', theme)
-  }, [theme])
 
   return (
       <Router>
       <Routes>
-        <Route element={<Navbar theme={theme} toggle={toggle} section={section}/>}>
-          <Route path='/' element={<Home theme={theme} section={section} setSection={setSection}/>} />
-          <Route path='/projects' element={<Projects theme={theme} />} />
+        <Route element={<Navbar section={section}/>}>
+          <Route path='/' element={<Home  section={section} setSection={setSection}/>} />
+          <Route path='/projects' element={<Projects  />} />
         </Route>
       </Routes>
     </Router>
