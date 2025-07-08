@@ -4,7 +4,7 @@ export const Front = {
     greeting :`Hi, I'm`,
     name : `Raven`,
     role :`Aspiring Software Developer`,
-    description : `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."`,
+    description : `"To be a software developer is to wield quiet magic—turning thoughts into tools, and dreams into code."`,
     github : `Github`,
     linkedin : `LinkedIn`,
     resume : `Resume`,
