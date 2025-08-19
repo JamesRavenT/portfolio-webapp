@@ -29,30 +29,30 @@ export default function MobileMenu({ theme, section }) {
 
   return (
     <div className='lg:hidden flex mr-auto items-center gap-x-2'>
-      <AnimatePresence>
+      <AnimatePresence mode='wait'>
         {section !== '' && (
           <motion.button
             key='menu-toggle'
             initial={{ y: '100%', opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: '100%', opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className='relative z-[999] p-2 rounded rotate-90'
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            className='relative z-[999] py-5 px-3 rounded rotate-90'
             onClick={toggleDrawer}
           >
-            {isOpen ? <X /> : <Menu />}
+            {isOpen ? <X /> : <Menu size='30'/>}
           </motion.button>
         )}
       </AnimatePresence>
 
-      <AnimatePresence>
+      <AnimatePresence mode='wait'>
         {isOpen && (
           <motion.div
             key='menu-panel'
             initial={{ x: '-100%' }}
             animate={{ x: '0%' }}
             exit={{ x: '-100%' }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
             className='fixed left-0 right-0 top-16 overflow-y-auto h-full z-[998] backdrop-blur-2xl bg-black/60'
           >
             <ul className='flex flex-col min-h-[100dvh] w-screen text-center space-y-5 pt-10 text-white'>

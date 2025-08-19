@@ -25,7 +25,7 @@ export default function Category({ section }) {
             initial={!hasLineAnimated ? { scaleX: 0, opacity: 0 } : false}
             animate={{ x: '0%', opacity: 1 }}
             exit={{ x: '-100%', opacity: 0 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
             className='flex h-15 items-center justify-center text-center gap-x-1'
           >
             <hr className='mr-auto w-[60%] border-1 origin-left ' />
@@ -35,7 +35,7 @@ export default function Category({ section }) {
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -10, opacity: 0 }}
-                transition={{ duration: 0.5, ease: 'easeOut' }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
                 className='text-lg w-25 mx-5.5'
               >
                 {section.toUpperCase()}

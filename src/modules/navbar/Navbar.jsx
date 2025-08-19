@@ -1,33 +1,21 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom';
+import MenuMobile from './components/menu/MenuMobile';
 
-import DesktopMenu from './components/menu/MenuDesktop'
-import MobileMenu from './components/menu/MenuMobile'
-import Theme from './components/Theme'
-import Logo from './components/Logo'
-import { Dark, Light } from '../../assets/variables/colors'
+export default function Navbar({ section }) {
+  return (
+    <div className="w-full">
+      {/* Fixed transparent navbar */}
+      <div className="fixed top-0 left-0 w-full z-50 bg-transparent">
+        <nav className="flex items-center justify-between w-full px-4 py-3">
+          {/* Mobile Menu */}
+          <MenuMobile section={section} />
+        </nav>
+      </div>
 
-
-
-export default function Navbar({toggle, section}){
-
-
-    console.log(section)
-    return(
-        <div  className='w-full ' >
-            <div className='flex h-25 w-full sticky top-0 z-50'>
-                <nav className='flex mx-auto px-3.5 w-screen gap-x-2'>
-
-                    
-                    <MobileMenu  section={section} />
-                    {/* <Theme theme={theme} toggle={toggle} /> */}
-                </nav> 
-            </div>
-            
-            <main>
-                <Outlet />
-            </main>  
-        </div>    
-    )
+      {/* Pages with snap scrolling */}
+      <main className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+        <Outlet />
+      </main>
+    </div>
+  );
 }
-
-{/* <DesktopMenu theme={theme}/> */}

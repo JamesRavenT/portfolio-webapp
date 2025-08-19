@@ -42,7 +42,7 @@ export default function Home({ section, setSection }) {
 
 
   return (
-    <div className='flex flex-col relative z-10'>
+    <div className='flex flex-col relative z-10 h-screen overflow-y-scroll snap-y snap-mandatory'>
       <Category section={section}/>
       <section ref={topRef} id='top' className='snap-start h-screen'>
         <Frontpage />
