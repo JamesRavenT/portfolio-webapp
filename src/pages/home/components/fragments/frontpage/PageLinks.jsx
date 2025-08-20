@@ -10,9 +10,9 @@ export default function PageLinks(){
                 gap-y-3
                 items-center
                 '>
-                <p>About Me </p>  
-                <p>Skills</p>      
-                <p>Projects</p>             
+                <p className='text-xl'>About Me </p>  
+                <p className='text-xl'>Skills</p>      
+                <p className='text-xl'>Projects</p>             
         </div>
         </>
     )

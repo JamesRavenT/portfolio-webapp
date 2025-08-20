@@ -1,7 +1,7 @@
 import PageLinks from "./PageLinks";
 import SocialLinks from "./SocialLinks";
 
-export default function FrontPageMenu () {
+export default function FrontPageTOC () {
     return(
         <>
         <div className='

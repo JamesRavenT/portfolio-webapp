@@ -5,7 +5,7 @@ import { Front } from '../../../../../assets/text/home'
 import { githubICO, linkedinICO } from '../../../../../assets/icons/icons' 
 const viewGithub = () => (window.location.href = links.github);
 const viewLinkedIn = () => (window.location.href = links.linkedin);
-const viewResume = () => (window.location.href = links.resume);
+
 
 export default function SocialLinks(){
     return(
@@ -14,13 +14,15 @@ export default function SocialLinks(){
               flex 
               flex-row
               w-full 
-              pt-4 
+              pt-4
+              px-3
               gap-x-2
               items-center 
               justify-center'>
-            <div className='flex items-center gap-x-2 w-fit justify-center'>
+         
               {/* GitHub */}
-              <button
+              <div className='flex mr-auto items-center gap-x-2'>
+               <button
                   onClick={viewGithub}
                   className='
                     bg-black 
@@ -34,8 +36,21 @@ export default function SocialLinks(){
                       rounded-sm'>
                   <img src={githubICO} alt='github' className='size-5 sm:size-7' />
               </button>
+              <p className='text-xl'>Github</p>
+              </div>
+             
+
+            {/* Divider */}
+        
+              <div className='
+                      w-[1px]
+                      h-[40px]
+                      bg-white
+                      '/>
+                    
 
             {/* Linked In */}
+            <div className='flex ml-auto items-center gap-x-2'>
               <button
                   onClick={viewLinkedIn}
                   className='
@@ -49,37 +64,11 @@ export default function SocialLinks(){
                       rounded-sm'>
                   <FaLinkedinIn className='size-5 sm:size-7' />
             </button>
-            </div>      
+            <p className='text-xl'>LinkedIn</p>
+              </div>
 
-          {/* Divider */}
-        
-          <div className='
-                  w-[1px]
-                  h-[40px]
-                  bg-white
-                  '/>
-                 
-          {/* Resume */}
-          <div className='flex items-center gap-x-2 w-auto justify-center'>
-          <button
-            onClick={viewResume}
-            className='
-                bg-black 
-                flex 
-                h-fit
-                px-7 sm:px-10
-                py-1.5 sm:py-5
-                gap-x-2 sm:gap-x-3
-                items-center 
-                text-lg sm:text-xl
-                font-light
-                border-1
-                rounded-sm'>
-            <Eye className='size-6' />
-            {Front.resume}
-          </button>
-          </div>
-        </div>
+            </div>
+
 
         </>
     )
