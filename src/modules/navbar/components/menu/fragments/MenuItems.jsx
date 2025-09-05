@@ -1,22 +1,22 @@
+import { useScroll } from "../../../helper/context";
+
 import { Link } from "react-router-dom"
 
 export default function MenuItems(){
+    const { scrollToSection } = useScroll() ;
     return (
         <>
             <li>
-                <Link to ='/home'>
-                <button>Home</button>
-                </Link>
+                <button onClick={() => {scrollToSection("top")}}>HOME</button>
             </li>
             <li>
-                <Link to ='/home'>
-                <button>Skills</button>
-                </Link>
+                <button onClick={() => {scrollToSection("basicinfo")}}>ABOUT ME</button>
             </li>
             <li>
-                <Link to ='/projects'>
-                <button>Projects</button>
-                </Link>
+                <button onClick={() => scrollToSection("skills")}>SKILLS</button>
+            </li>
+            <li>
+                <button onClick={() => scrollToSection("projects")}>PROJECTS</button>
             </li>
         </>
     )

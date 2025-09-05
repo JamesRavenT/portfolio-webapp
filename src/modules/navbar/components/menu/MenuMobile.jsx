@@ -28,7 +28,7 @@ export default function MobileMenu({ theme, section }) {
   }, [section]);
 
   return (
-    <div className='lg:hidden flex mr-auto items-center gap-x-2'>
+    <div className='flex mr-auto items-center gap-x-2 md:hidden'>
       <AnimatePresence mode='wait'>
         {section !== '' && (
           <motion.button
