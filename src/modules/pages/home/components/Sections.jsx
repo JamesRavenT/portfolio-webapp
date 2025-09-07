@@ -16,7 +16,7 @@ export default function Section({ section }) {
   const show = section !== "";
 
   return (
-    <div className="sticky top-16 z-40 w-full h-6 font-electrolize">
+    <div className="sticky top-13 z-40 w-full h-6 font-electrolize">
       <div className="flex h-15 items-center justify-center text-center gap-x-1">
         {/* Line */}
         <AnimatePresence>
