@@ -82,16 +82,16 @@ const onWheel = (e) => {
       className="flex flex-col relative z-10 h-screen overflow-y-auto snap-container snap-y snap-mandatory scrollbar-hidden"
     >
       <Category section={section} />
-      <section ref={topRef} id="top" className="snap-start h-screen">
+      <section ref={topRef} id="top" className="relative snap-start h-screen">
         <Frontpage />
       </section>
-      <section ref={basicInfoRef} id="basicinfo" className="snap-start h-screen">
+      <section ref={basicInfoRef} id="basicinfo" className="relative snap-start h-screen ">
         <BasicInfo />
       </section>
-      <section ref={skillsRef} id="skills" className="snap-start h-screen">
+      <section ref={skillsRef} id="skills" className="relative snap-start h-screen">
         <Skills />
       </section>
-      <section ref={projectsRef} id="projects" className="snap-start h-screen">
+      <section ref={projectsRef} id="projects" className="relative snap-start h-screen">
         <Projects />
       </section>
     </div>

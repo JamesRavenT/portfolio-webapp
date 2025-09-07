@@ -12,10 +12,13 @@ export const Front = {
 }
 
 export const AboutMe = {
-    desc: `"Hello, world!" — this simple phrase marked the start of my coding journey back in junior high. 
-            Inspired by a lesson on Web Development, I grew deeply fascinated with how things work behind the screen, eventually leading me to pursue a degree in Computer Science. \n
-            Though my first role led me into the customer service industry, my passion for tech never faded. I also believe the best developers are great listeners — and I’ve been both. \n
-            Now, I'm focused on pursuing what I've always loved: crafting clean, efficient code and solving real-world problems through technology. My long-term goal? To build my own Jarvis.`,    
+    desc: `"My career began outside of software development, 
+            but my drive to solve problems and create meaningful solutions led me to teaching myself web development. 
+            Through personal projects, I’ve built skills in turning ideas into working applications, always guided by persistence and curiosity.
+
+           Coming from a customer-facing background, 
+           I bring adaptability, empathy, and strong communication skills—qualities that help me understand users and collaborate effectively with teams. 
+           While I may not yet have formal industry experience, I’m eager to grow as a developer, contribute to impactful projects, and continuously sharpen my craft.`,    
 
     educ : {
         shs : {
