@@ -12,7 +12,7 @@ export default function Number() {
                       py-2.5 sm:py-5
                       gap-x-2 sm:gap-x-3
                       items-center 
-                      border-1
+                      border-1 md:border-0
                       rounded-sm'
                 onClick={viewGithub}> 
                 <Phone size={20}/>

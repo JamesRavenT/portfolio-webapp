@@ -2,7 +2,9 @@ import PageLinks from "./fragments/PageLinks";
 import SocialLinks from "./fragments/SocialLinks";
 import ViewMore from "./fragments/ViewMore";
 
-export default function MobileContent () {
+export default function MobileContent ({section}) {
+
+  
     return(
         <>
         <div className='flex flex-col w-full pt-5 pl-2'>

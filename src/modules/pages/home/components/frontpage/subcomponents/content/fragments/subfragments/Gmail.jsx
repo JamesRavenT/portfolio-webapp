@@ -9,7 +9,7 @@ export default function Gmail() {
         <button className='
                       bg-white flex h-fit p-1 sm:h-12
                       items-center 
-                      border-1
+                      border-1 md:border-0
                       rounded-sm'
                 onClick={viewGithub}> 
                 <img src={gmailICO} alt='gmail' className='size-9' />

@@ -13,7 +13,7 @@ export default function DesktopContent () {
         <>
         <div className='flex flex-col h-[70vh] w-full'>
             <Greetings />
-            <hr className='w-[38.5%] border-0.5 my-4 ml-auto' /> 
+            <hr className='w-[44%] border-0.5 my-4 ml-auto' /> 
             <div className="flex ml-auto">
               <div className="grid grid-cols-2 gap-x-2 mr-[-20px]">
                 <div className="flex gap-x-2 items-center">
