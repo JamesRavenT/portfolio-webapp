@@ -11,9 +11,9 @@ const paragraphs = [
 `I may not yet have professional industry experience, but I bring years of curiosity, persistence, and dedication. For me, coding isn’t just a career path—it’s a lifelong craft I’m eager to grow in and share through meaningful work.`
 ];
     return (
-        <div className="text-2xl text-center">
+        <div className="text-2xl text-center md:w-[60%]">
             {paragraphs.map((text, idx) => (
-                <p key={idx} className="text-xs mx-5 my-4">
+                <p key={idx} className="text-xs md:text-base m-4">
                 {text}
                 </p>
                 ))}

@@ -12,7 +12,7 @@ export default function Education() {
     ];
     return (
         <>
-         <div className="flex flex-col items-center h-auto w-full py-3 gap-y-2">
+        <div className="md:hidden flex flex-col items-center h-auto w-full py-3 gap-y-2">
             <hr className='w-[90%] border-0.5' /> 
             <p className="text-sm self-start mx-5">Educational background</p>
             <div className='flex gap-x-10'>          
@@ -87,10 +87,29 @@ export default function Education() {
                     )}
                 </motion.div>
             </motion.div>
-
-
-           
         </div>
+
+        <div className="hidden md:flex gap-x-5 w-[60%] h-[6rem]">
+                <div className="flex w-[50%] bg-white items-center gap-x-5 rounded-md text-black">
+                    <GraduationCap color='black' className="ml-5 stroke-1 size-15"/>
+                    <div className='w-[1.5px] h-[4rem] bg-black'/>
+                    <div className="flex flex-col">
+                        <p className="text-xl text-left">{AboutMe.educ.college.year}</p>
+                        <p className="text-lg text-left">{AboutMe.educ.college.degree}</p>
+                        <p className="text-xs text-left">{AboutMe.educ.college.school}</p>
+                    </div>
+                </div>
+                <div className='w-[0.5px] h-[6rem] bg-white'/>
+                <div className="flex w-[50%] bg-white items-center gap-x-5 rounded-md text-black">
+                    <GraduationCap color='black' className="ml-5 stroke-1 size-15"/>
+                    <div className='w-[1.5px] h-[4rem] bg-black'/>
+                    <div className="flex flex-col">
+                        <p className="text-xl text-left">{AboutMe.educ.shs.year}</p>
+                        <p className="text-lg text-left">{AboutMe.educ.shs.strand}</p>
+                        <p className="text-xs text-left">{AboutMe.educ.shs.school}</p>
+                    </div>
+                </div>
+            </div>        
         </>
     )
 }

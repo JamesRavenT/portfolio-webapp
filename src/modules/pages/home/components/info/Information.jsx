@@ -1,8 +1,9 @@
 import { Diamond, Square } from 'lucide-react'
 import Background from './subcomponents/wallpaper/Background'
-import Summary from './subcomponents/Summary'
+
 import Education from './subcomponents/content/fragments/Education'
 import MobileContent from './subcomponents/content/MobileContent'
+import DesktopContent from './subcomponents/content/DesktopContent'
 
 export default function BasicInfo(){
     return(
@@ -11,7 +12,9 @@ export default function BasicInfo(){
         <div className='md:hidden'>
              <MobileContent />
         </div>
-       
+        <div className='hidden md:flex'>
+             <DesktopContent />
+        </div>
         </div>
     ) 
 }
