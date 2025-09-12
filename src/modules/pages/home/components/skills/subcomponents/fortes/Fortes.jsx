@@ -1,49 +1,59 @@
-"use client";
-
-import { useState } from "react";
+// src/components/Fortes.js
 import { motion, AnimatePresence } from "framer-motion";
+import useIsDesktop from "../../../../../../../hooks/GetWindowSize";
 
-// Import slide components
-import WebDev from "./webdev/WebDev";
-import AndroidDev from "./androiddev/AndroidDev";
-import SoftwareDev from "./softwaredev/SoftwareDev";
+import SkillTree from "./skilltree/SkillTree";
+import IndicatorMobile from "./indicators/IndicatorMobile";
+import WebDevIco from "../_icons/WebDevIco";
+import AndDevIco from "../_icons/AndDevIco";
+import SoftDevIco from "../_icons/SoftDevIco";
 
-const slides = [WebDev, AndroidDev, SoftwareDev];
+const slides = [
+  {
+    Icon: WebDevIco,
+    title: "Web Development",
+    description: "Building modern, responsive, and scalable web apps.",
+  },
+  {
+    Icon: AndDevIco,
+    title: "Android Development",
+    description: "Creating native and cross-platform mobile applications.",
+  },
+  {
+    Icon: SoftDevIco,
+    title: "Software Development",
+    description: "Designing and engineering software solutions.",
+  },
+]; // now using data instead of hard-coded components
 
-export default function Fortes() {
-  const [[index, direction], setIndex] = useState([0, 0]); // store index + direction
+export default function Fortes({ index, direction, setIndex }) {
+  const isDesktop = useIsDesktop(768);
 
   const paginate = (dir) => {
     setIndex(([prevIndex]) => {
       let newIndex = prevIndex + dir;
-
-      // Dead-end logic
       if (newIndex < 0) newIndex = 0;
       if (newIndex >= slides.length) newIndex = slides.length - 1;
-
-      return [newIndex, dir]; // keep track of direction
+      return [newIndex, dir];
     });
   };
 
   const variants = {
-    enter: (dir) => ({
-      x: dir > 0 ? 100 : -100,
-      opacity: 0,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-    },
-    exit: (dir) => ({
-      x: dir > 0 ? -100 : 100,
-      opacity: 0,
-    }),
+    enter: (dir) =>
+      isDesktop
+        ? { y: 0, opacity: 0 }
+        : { x: dir > 0 ? 100 : -100, opacity: 0 },
+    center: { x: 0, y: 0, opacity: 1 },
+    exit: (dir) =>
+      isDesktop
+        ? { y: 0, opacity: 0 }
+        : { x: dir > 0 ? -100 : 100, opacity: 0 },
   };
 
   const CurrentSlide = slides[index];
 
   return (
-    <div className="flex flex-col items-center justify-center gap-y-5 pt-5 w-full">
+    <div className="flex flex-col h-65 md:h-35 md:mt-20 items-center justify-center gap-y-5 pt-5 w-full">
       <div className="relative flex justify-center items-center w-full overflow-hidden">
         <AnimatePresence mode="wait" initial={false} custom={direction}>
           <motion.div
@@ -54,33 +64,29 @@ export default function Fortes() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
+            drag={isDesktop ? false : "x"}
+            dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
             onDragEnd={(e, { offset }) => {
-              if (offset.x > 100 && index > 0) paginate(-1); // swipe right
-              else if (offset.x < -100 && index < slides.length - 1) paginate(1); // swipe left
+              if (!isDesktop) {
+                if (offset.x > 100 && index > 0) paginate(-1);
+                else if (offset.x < -100 && index < slides.length - 1) paginate(1);
+              } else {
+                if (offset.y > 100 && index > 0) paginate(-1);
+                else if (offset.y < -100 && index < slides.length - 1) paginate(1);
+              }
             }}
-            className=" w-full"
+            className="w-full"
           >
-            <CurrentSlide />
+            <SkillTree
+              Icon={CurrentSlide.Icon}
+              title={CurrentSlide.title}
+              description={CurrentSlide.description}
+            />
           </motion.div>
         </AnimatePresence>
       </div>
-
-      {/* Indicators */}
-      <div className=" flex  gap-x-5 mt-10 items-center">
-        {slides.map((_, i) => (
-            <div
-            key={i}
-            onClick={() => setIndex([i, i > index ? 1 : -1])}
-            className={`cursor-pointer transition-all duration-300 transform 
-                ${i === index 
-                ? "w-2 h-2 bg-white rotate-45" 
-                : "w-1 h-1 bg-gray-500 rotate-0"}`
-            }
-            />
-        ))}
-        </div>
+      <IndicatorMobile index={index} slides={slides} setIndex={setIndex} />
+      
     </div>
   );
 }

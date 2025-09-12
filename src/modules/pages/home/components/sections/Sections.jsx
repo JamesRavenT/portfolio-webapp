@@ -17,6 +17,7 @@ export default function Section({ section }) {
 
   return (
     <div className="sticky top-13 z-40 w-full h-6 font-electrolize">
+      
       <div className="md:hidden flex h-15 items-center justify-center text-center gap-x-1">
         {/* Line */}
         <AnimatePresence>
@@ -50,6 +51,7 @@ export default function Section({ section }) {
         </AnimatePresence>
       </div>
 
+      {/* Desktop View */}
         <div className="hidden md:flex h-15 items-center justify-center align- text-center gap-x-1">
         {/* Line */}
         <AnimatePresence>

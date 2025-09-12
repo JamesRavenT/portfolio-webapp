@@ -4,7 +4,7 @@ import Frontpage from './components/frontpage/Frontpage';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import BasicInfo from './components/info/Information';
-import Category from './components/Sections';
+import Category from './components/sections/Sections';
 import { Outlet } from 'react-router-dom';
 import { ScrollContext } from '../../navbar/helper/context';
 
