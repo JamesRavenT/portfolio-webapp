@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import MobileView from './layout/MobileView';
-import DesktopView from './layout/DesktopView';
+import MobileView from './components/_layout/MobileView';
+import DesktopView from './components/_layout/DesktopView';
 
 export default function Content({ section }) {
   const [isOpen, setIsOpen] = useState(false);

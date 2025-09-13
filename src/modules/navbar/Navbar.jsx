@@ -1,6 +1,5 @@
 import { ScrollContext } from '../../hooks/useScroll';
 import { useSectionRefs } from '../../hooks/useSectionRef';
-import MenuDesktop from './content/layout/DesktopView';
 import Content from './content/Content';
 
 export default function Navbar({ section }) {
