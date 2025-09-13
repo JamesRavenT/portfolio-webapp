@@ -4,16 +4,11 @@ export default function FrontPageLabel() {
   return (
     <>
       <div className="flex flex-col w-[95%] sm:gap-y-2">
-
         {/* Greeting */}
-        <p className="pl-1 sm:pl-2 text-2xl md:text-xl">
-          {Front.greeting}
-        </p>
+        <p className="pl-1 sm:pl-2 text-2xl md:text-xl">{Front.greeting}</p>
 
         {/* Name */}
-        <p className="font-bold text-6xl sm:text-9xl md:text-7xl">
-          {Front.name}
-        </p>
+        <p className="font-bold text-6xl sm:text-9xl md:text-7xl">{Front.name}</p>
 
         {/* Role */}
         <div className="flex w-full gap-x-1">
@@ -22,7 +17,6 @@ export default function FrontPageLabel() {
           </p>
           <div className="md:w-[2%] w-[5%] bg-white" />
         </div>
-
       </div>
     </>
   );

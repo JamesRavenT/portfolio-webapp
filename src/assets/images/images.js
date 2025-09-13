@@ -1,3 +1,3 @@
 import resume from './resume-qr.png';
 
-export const resumeQR = resume
+export const resumeQR = resume;

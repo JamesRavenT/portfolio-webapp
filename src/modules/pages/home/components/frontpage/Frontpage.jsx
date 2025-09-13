@@ -8,25 +8,24 @@ import DesktopContent from './subcomponents/content/DesktopContent';
 // import Resume from './subcomponents/frontpage/Resume';
 
 export default function Frontpage() {
-
   return (
-    <div id='top' className='flex flex-col min-h-[100vh] w-full text-white font-electrolize'>
+    <div id="top" className="flex flex-col min-h-[100vh] w-full text-white font-electrolize">
       <Background />
-      
+
       {/* Mobile View */}
-      <div className='md:hidden'>
+      <div className="md:hidden">
         <TopBar />
-        <div className='flex flex-col items-center justify-center pt-7 px-2.5 sm:px-5 '> 
+        <div className="flex flex-col items-center justify-center pt-7 px-2.5 sm:px-5 ">
           <Headline />
           <MobileContent />
         </div>
       </div>
 
       {/* Desktop View */}
-      <div className='md:flex md:flex-col hidden'>
-        <div className='flex flex-col p-10'>
-            <Headline />
-            <DesktopContent />
+      <div className="md:flex md:flex-col hidden">
+        <div className="flex flex-col p-10">
+          <Headline />
+          <DesktopContent />
         </div>
       </div>
     </div>

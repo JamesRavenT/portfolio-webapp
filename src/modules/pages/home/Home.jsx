@@ -1,13 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { useScroll } from '../../navbar/helper/context'; //
+import { useScroll } from '../../../hooks/useScroll'; //
 import Frontpage from './components/frontpage/Frontpage';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
 import BasicInfo from './components/info/Information';
 import Category from './components/sections/Sections';
-import { Outlet } from 'react-router-dom';
-import { ScrollContext } from '../../navbar/helper/context';
-
 
 export default function Home({ section, setSection }) {
   const containerRef = useRef(null);
@@ -18,35 +15,30 @@ export default function Home({ section, setSection }) {
     const container = containerRef.current;
     let isScrolling = false;
 
-const onWheel = (e) => {
-  if (isScrolling) return;
-  e.preventDefault();
+    const onWheel = (e) => {
+      if (isScrolling) return;
+      e.preventDefault();
 
-  const direction = e.deltaY > 0 ? 1 : -1;
-  const container = containerRef.current;
-  const sections = [topRef, basicInfoRef, skillsRef, projectsRef].map(
-    (ref) => ref.current
-  );
+      const direction = e.deltaY > 0 ? 1 : -1;
+      const container = containerRef.current;
+      const sections = [topRef, basicInfoRef, skillsRef, projectsRef].map((ref) => ref.current);
 
-  const sectionHeight = window.innerHeight;
-  
-  // 👇 adjust based on scroll direction
-  const currentIndex =
-    direction > 0
-      ? Math.floor(container.scrollTop / sectionHeight)
-      : Math.ceil(container.scrollTop / sectionHeight);
+      const sectionHeight = window.innerHeight;
 
-  let nextIndex = Math.min(
-    sections.length - 1,
-    Math.max(0, currentIndex + direction)
-  );
+      // 👇 adjust based on scroll direction
+      const currentIndex =
+        direction > 0
+          ? Math.floor(container.scrollTop / sectionHeight)
+          : Math.ceil(container.scrollTop / sectionHeight);
 
-  if (sections[nextIndex]) {
-    isScrolling = true;
-    sections[nextIndex].scrollIntoView({ behavior: 'smooth' });
-    setTimeout(() => (isScrolling = false), 750);
-  }
-};
+      let nextIndex = Math.min(sections.length - 1, Math.max(0, currentIndex + direction));
+
+      if (sections[nextIndex]) {
+        isScrolling = true;
+        sections[nextIndex].scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => (isScrolling = false), 750);
+      }
+    };
 
     container.addEventListener('wheel', onWheel, { passive: false });
     return () => container.removeEventListener('wheel', onWheel);

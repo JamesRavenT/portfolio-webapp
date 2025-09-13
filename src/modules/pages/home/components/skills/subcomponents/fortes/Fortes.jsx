@@ -1,28 +1,28 @@
 // src/components/Fortes.js
-import { motion, AnimatePresence } from "framer-motion";
-import useIsDesktop from "../../../../../../../hooks/GetWindowSize";
+import { motion, AnimatePresence } from 'framer-motion';
+import useIsDesktop from '../../../../../../../hooks/GetWindowSize';
 
-import SkillTree from "./skilltree/SkillTree";
-import IndicatorMobile from "./indicators/IndicatorMobile";
-import WebDevIco from "../_icons/WebDevIco";
-import AndDevIco from "../_icons/AndDevIco";
-import SoftDevIco from "../_icons/SoftDevIco";
+import SkillTree from './skilltree/SkillTree';
+import IndicatorMobile from './indicators/IndicatorMobile';
+import WebDevIco from '../_icons/WebDevIco';
+import AndDevIco from '../_icons/AndDevIco';
+import SoftDevIco from '../_icons/SoftDevIco';
 
 const slides = [
   {
     Icon: WebDevIco,
-    title: "Web Development",
-    description: "Building modern, responsive, and scalable web apps.",
+    title: 'Web Development',
+    description: 'Building modern, responsive, and scalable web apps.',
   },
   {
     Icon: AndDevIco,
-    title: "Android Development",
-    description: "Creating native and cross-platform mobile applications.",
+    title: 'Android Development',
+    description: 'Creating native and cross-platform mobile applications.',
   },
   {
     Icon: SoftDevIco,
-    title: "Software Development",
-    description: "Designing and engineering software solutions.",
+    title: 'Software Development',
+    description: 'Designing and engineering software solutions.',
   },
 ]; // now using data instead of hard-coded components
 
@@ -39,15 +39,9 @@ export default function Fortes({ index, direction, setIndex }) {
   };
 
   const variants = {
-    enter: (dir) =>
-      isDesktop
-        ? { y: 0, opacity: 0 }
-        : { x: dir > 0 ? 100 : -100, opacity: 0 },
+    enter: (dir) => (isDesktop ? { y: 0, opacity: 0 } : { x: dir > 0 ? 100 : -100, opacity: 0 }),
     center: { x: 0, y: 0, opacity: 1 },
-    exit: (dir) =>
-      isDesktop
-        ? { y: 0, opacity: 0 }
-        : { x: dir > 0 ? -100 : 100, opacity: 0 },
+    exit: (dir) => (isDesktop ? { y: 0, opacity: 0 } : { x: dir > 0 ? -100 : 100, opacity: 0 }),
   };
 
   const CurrentSlide = slides[index];
@@ -63,8 +57,8 @@ export default function Fortes({ index, direction, setIndex }) {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-            drag={isDesktop ? false : "x"}
+            transition={{ duration: 0.2, ease: 'easeInOut' }}
+            drag={isDesktop ? false : 'x'}
             dragConstraints={{ top: 0, bottom: 0, left: 0, right: 0 }}
             onDragEnd={(e, { offset }) => {
               if (!isDesktop) {
@@ -86,7 +80,6 @@ export default function Fortes({ index, direction, setIndex }) {
         </AnimatePresence>
       </div>
       <IndicatorMobile index={index} slides={slides} setIndex={setIndex} />
-      
     </div>
   );
 }

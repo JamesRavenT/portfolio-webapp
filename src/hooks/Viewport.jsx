@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 function useMobileBars() {
   const [isBarsHidden, setIsBarsHidden] = useState(false);
@@ -15,13 +15,13 @@ function useMobileBars() {
       setIsBarsHidden(diff < 60); // if nearly equal → bars hidden
     }
 
-    window.visualViewport?.addEventListener("resize", checkBars);
-    window.addEventListener("resize", checkBars);
+    window.visualViewport?.addEventListener('resize', checkBars);
+    window.addEventListener('resize', checkBars);
     checkBars();
 
     return () => {
-      window.visualViewport?.removeEventListener("resize", checkBars);
-      window.removeEventListener("resize", checkBars);
+      window.visualViewport?.removeEventListener('resize', checkBars);
+      window.removeEventListener('resize', checkBars);
     };
   }, []);
 
