@@ -6,13 +6,13 @@ import { useSmoothScrollSnap } from './content/hooks/useSmoothScrollSnap';
 import Frontpage from './content/sections/frontpage/Frontpage';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
-import BasicInfo from './components/info/Information';
+import AboutMe from './content/sections/aboutme/AboutMe';
 import Category from './content/sections/Sections';
 
 export default function Home({ section, setSection }) {
   const containerRef = useRef(null);
-  const { topRef, basicInfoRef, skillsRef, projectsRef } = useScroll();
-  const refs = [topRef, basicInfoRef, skillsRef, projectsRef];
+  const { frontpageRef, aboutmeRef, skillsRef, projectsRef } = useScroll();
+  const refs = [frontpageRef, aboutmeRef, skillsRef, projectsRef];
 
   // Hooks
   useSmoothScrollSnap(containerRef, refs);
@@ -24,11 +24,11 @@ export default function Home({ section, setSection }) {
       className="flex flex-col relative z-10 h-screen overflow-y-auto snap-container snap-y snap-mandatory scrollbar-hidden"
     >
       <Category section={section} />
-      <section ref={topRef} id="top" className="relative snap-start h-screen">
+      <section ref={frontpageRef} id="frontpage" className="relative snap-start h-screen">
         <Frontpage section={section} />
       </section>
-      <section ref={basicInfoRef} id="basicinfo" className="relative snap-start h-screen">
-        <BasicInfo />
+      <section ref={aboutmeRef} id="aboutme" className="relative snap-start h-screen">
+        <AboutMe />
       </section>
       <section ref={skillsRef} id="skills" className="relative snap-start h-screen">
         <Skills />

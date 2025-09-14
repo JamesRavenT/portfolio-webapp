@@ -11,10 +11,10 @@ export function useSectionObserver(refs, setSection) {
 
         const id = visible.target.id;
         switch (id) {
-          case 'top':
+          case 'frontpage':
             setSection('');
             break;
-          case 'basicinfo':
+          case 'aboutme':
             setSection('About Me');
             break;
           case 'skills':

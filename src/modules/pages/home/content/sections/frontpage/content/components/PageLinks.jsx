@@ -1,5 +1,5 @@
 import { useScroll } from '../../../../../../../../hooks/useScroll';
-import { sections } from '../data/frontpage';
+import { sections } from '../../../../data/frontpage';
 
 export default function PageLinks() {
   const { scrollToSection } = useScroll();

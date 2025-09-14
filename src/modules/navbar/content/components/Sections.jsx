@@ -4,8 +4,8 @@ export default function Sections({ section, closeMenu }) {
   const { scrollToSection } = useScroll();
 
   const menuItems = [
-    { id: 'top', label: 'HOME' },
-    { id: 'basicinfo', label: 'ABOUT ME' },
+    { id: 'frontpage', label: 'HOME' },
+    { id: 'aboutme', label: 'ABOUT ME' },
     { id: 'skills', label: 'SKILLS' },
     { id: 'projects', label: 'PROJECTS' },
   ];
@@ -15,7 +15,7 @@ export default function Sections({ section, closeMenu }) {
       {menuItems.map((item) => {
         const isActive =
           section.toLowerCase() === item.label.toLowerCase() ||
-          (item.id === 'top' && section === '');
+          (item.id === 'frontpage' && section === '');
 
         return (
           <li key={item.id}>

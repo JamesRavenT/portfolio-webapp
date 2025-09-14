@@ -9,7 +9,7 @@ export default function DesktopView({ section }) {
     <div className="lg:flex lg:flex-col hidden">
       <div className="flex flex-col p-10">
         <Headline />
-        <div className="flex flex-col h-[40vh] w-full"></div>
+        <div className="flex flex-col h-[36vh] w-full"></div>
         <div className="flex flex-col h-[30vh] w-full">
           <Greetings />
           <hr className="w-[42%] border-0.5 my-4 ml-auto" />

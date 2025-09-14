@@ -1,5 +1,5 @@
-import { ICO_Github } from '../components/_icons/ICO_Github';
-import { ICO_LinkedIn } from '../components/_icons/ICO_LinkedIn';
+import { ICO_Github } from '../icons/ICO_Github';
+import { ICO_LinkedIn } from '../icons/ICO_LinkedIn';
 
 const wallpaper = {
   video: '/backgrounds/frontpage.mp4',

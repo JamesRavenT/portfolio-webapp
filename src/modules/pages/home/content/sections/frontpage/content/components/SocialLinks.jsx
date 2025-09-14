@@ -1,5 +1,5 @@
-import { github, linkedIn } from '../data/frontpage';
-import IconButton from './elements/IconButton';
+import { github, linkedIn } from '../../../../data/frontpage';
+import IconButton from './ui/IconButton';
 import ResumeQR from './ResumeQR';
 
 export default function SocialLinks() {

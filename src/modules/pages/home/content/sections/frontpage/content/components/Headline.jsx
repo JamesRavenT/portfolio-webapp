@@ -1,4 +1,4 @@
-import { headlines } from '../data/frontpage';
+import { headlines } from '../../../../data/frontpage';
 
 export default function Headline() {
   return (

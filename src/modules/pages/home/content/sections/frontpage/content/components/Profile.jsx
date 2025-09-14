@@ -1,5 +1,5 @@
 import { IdCard } from 'lucide-react';
-import { resume } from '../data/frontpage';
+import { resume } from '../../../../data/frontpage';
 export default function Profile() {
   return (
     <div className="flex h-[10vh] w-full mt-2 py-2 px-4 items-center">
