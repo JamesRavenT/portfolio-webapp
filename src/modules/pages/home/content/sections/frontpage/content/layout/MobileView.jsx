@@ -8,6 +8,7 @@ export default function MobileView({ section }) {
   return (
     <div className="lg:hidden">
       <Profile />
+      <div className="w-full h-[5vh]" />
       <div className="flex h-[80vh] justify-center">
         <div className="flex flex-col w-full items-center justify-center px-2.5 sm:px-5 ">
           <Headline />
