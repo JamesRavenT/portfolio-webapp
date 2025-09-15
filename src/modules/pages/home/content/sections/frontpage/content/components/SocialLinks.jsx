@@ -1,4 +1,4 @@
-import { github, linkedIn } from '../../../../data/frontpage';
+import { github, linkedIn } from '../../../../_data/frontpage';
 import IconButton from './ui/IconButton';
 import ResumeQR from './ResumeQR';
 

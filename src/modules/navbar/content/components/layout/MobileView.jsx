@@ -2,10 +2,10 @@ import { Menu } from 'lucide-react';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { ScrollHandle } from '../ScrollHandle';
-import { useMenuScrollRestrictions } from '../../hooks/useMenuScrollRestrictions';
-import { useMenuCloseIfTop } from '../../hooks/useMenuCloseIfTop';
+import { useMenuScrollRestrictions } from '../../_hooks/useMenuScrollRestrictions';
+import { useMenuCloseIfTop } from '../../_hooks/useMenuCloseIfTop';
 import Sections from '../Sections';
-import { useMenuCloseIfEsc } from '../../hooks/useMenuCloseIfEsc';
+import { useMenuCloseIfEsc } from '../../_hooks/useMenuCloseIfEsc';
 
 export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
   useMenuScrollRestrictions(isOpen);

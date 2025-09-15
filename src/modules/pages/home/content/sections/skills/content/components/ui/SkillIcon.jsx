@@ -1,4 +1,3 @@
-// components/SkillIcon.js
 export default function SkillIcon({ Icon, label }) {
   return (
     <div

@@ -1,4 +1,4 @@
-import { catchphrase } from '../../../../data/aboutme';
+import { catchphrase } from '../../../../_data/aboutme';
 
 export default function Catchphrase() {
   return (

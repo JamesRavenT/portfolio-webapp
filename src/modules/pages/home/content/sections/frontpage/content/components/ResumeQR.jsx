@@ -1,4 +1,4 @@
-import { resume } from '../../../../data/frontpage';
+import { resume } from '../../../../_data/frontpage';
 
 export default function ResumeQR() {
   return (

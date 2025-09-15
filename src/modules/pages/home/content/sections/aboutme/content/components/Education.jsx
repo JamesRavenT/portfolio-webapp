@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap } from 'lucide-react';
-import { education } from '../../../../data/aboutme';
+import { education } from '../../../../_data/aboutme';
 import YearSelector from './elements/YearSelector';
 import CornerBox from './ui/CornerBox';
 import Card from './elements/Card';

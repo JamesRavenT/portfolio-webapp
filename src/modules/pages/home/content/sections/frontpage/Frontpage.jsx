@@ -3,7 +3,10 @@ import Content from './content/Content';
 
 export default function Frontpage({ section }) {
   return (
-    <div id="frontpage" className="flex flex-col min-h-[100vh] w-full text-white font-electrolize justify-center">
+    <div
+      id="frontpage"
+      className="flex flex-col min-h-[100vh] w-full text-white font-electrolize justify-center"
+    >
       <Background />
       <Content section={section} />
     </div>

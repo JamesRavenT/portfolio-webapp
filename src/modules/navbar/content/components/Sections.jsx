@@ -1,4 +1,4 @@
-import { useScroll } from '../../../../hooks/useScroll';
+import { useScroll } from '../../../../_hooks/useScroll';
 
 export default function Sections({ section, closeMenu }) {
   const { scrollToSection } = useScroll();

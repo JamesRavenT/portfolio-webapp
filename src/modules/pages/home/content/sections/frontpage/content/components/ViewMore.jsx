@@ -1,5 +1,5 @@
 import { ChevronsDown } from 'lucide-react';
-import { useScroll } from '../../../../../../../../hooks/useScroll';
+import { useScroll } from '../../../../../../../../_hooks/useScroll';
 
 export default function ViewMore({ section }) {
   console.log(section);

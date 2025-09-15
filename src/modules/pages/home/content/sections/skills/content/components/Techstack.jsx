@@ -1,14 +1,11 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import WebDevTS from './fragments/content/WebDevTS';
-import AndroidDevTS from './fragments/content/AndroidDevTS';
-import SoftwareDevTS from './fragments/content/SoftwareDevTS';
+import { skillset } from '../../../../_data/skills';
+import SkillIcon from './ui/SkillIcon';
 
 export default function Techstack({ index }) {
-  const slides = [WebDevTS, AndroidDevTS, SoftwareDevTS];
-  const CurrentTSSlide = slides[index];
-
+  const currentSlide = skillset[index];
   return (
-    <div className="relative flex flex-col justify-center items-center w-full gap-y-5 overflow-hidden ">
+    <div className="relative flex flex-col justify-center items-center w-full gap-y-5 overflow-hidden">
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={`ts-${index}`}
@@ -27,7 +24,12 @@ export default function Techstack({ index }) {
             </div>
           </div>
 
-          <CurrentTSSlide />
+          {/* Render skill icons */}
+          <div className="grid grid-cols-3 gap-x-3 gap-y-4 place-items-center w-full">
+            {currentSlide.skills.map(({ Icon, label }, i) => (
+              <SkillIcon key={i} Icon={Icon} label={label} />
+            ))}
+          </div>
         </motion.div>
       </AnimatePresence>
     </div>

@@ -1,5 +1,5 @@
-import { ScrollContext } from '../../hooks/useScroll';
-import { useSectionRefs } from '../../hooks/useSectionRef';
+import { ScrollContext } from '../../_hooks/useScroll';
+import { useSectionRefs } from '../../_hooks/useSectionRef';
 import Content from './content/Content';
 
 export default function Navbar({ section }) {

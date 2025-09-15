@@ -11,7 +11,6 @@ export default function MobileView() {
         <Description />
         <Education />
       </div>
-
     </div>
   );
 }

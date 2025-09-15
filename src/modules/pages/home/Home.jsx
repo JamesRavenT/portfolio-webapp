@@ -1,11 +1,11 @@
 import { useRef } from 'react';
-import { useScroll } from '../../../hooks/useScroll';
-import { useSectionObserver } from './content/hooks/useSectionObserver';
-import { useSmoothScrollSnap } from './content/hooks/useSmoothScrollSnap';
+import { useScroll } from '../../../_hooks/useScroll';
+import { useSectionObserver } from './content/_hooks/useSectionObserver';
+import { useSmoothScrollSnap } from './content/_hooks/useSmoothScrollSnap';
 
 import Frontpage from './content/sections/frontpage/Frontpage';
 import Projects from './components/projects/Projects';
-import Skills from './components/skills/Skills';
+import Skills from './content/sections/skills/Skills';
 import AboutMe from './content/sections/aboutme/AboutMe';
 import Category from './content/sections/Sections';
 

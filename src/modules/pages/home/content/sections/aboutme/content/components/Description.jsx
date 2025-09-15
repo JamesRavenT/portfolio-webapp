@@ -1,4 +1,4 @@
-import { description } from '../../../../data/aboutme';
+import { description } from '../../../../_data/aboutme';
 
 export default function Description() {
   return (

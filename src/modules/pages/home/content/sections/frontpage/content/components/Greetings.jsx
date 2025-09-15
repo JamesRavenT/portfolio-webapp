@@ -1,4 +1,4 @@
-import { greetings } from '../../../../data/frontpage';
+import { greetings } from '../../../../_data/frontpage';
 
 export default function Greetings() {
   return (
