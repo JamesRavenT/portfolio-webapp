@@ -5,10 +5,7 @@ export default function Skills() {
   const [[index, direction], setIndex] = useState([0, 0]); // store index + direction
 
   return (
-    <div
-      id="skills"
-      className="flex flex-col items-center h-[100vh] w-full pt-25 gap-y-3 font-electrolize"
-    >
+    <div id="skills" className="flex flex-col min-h-screen w-full gap-y-3 font-electrolize">
       <Background />
       <Content index={index} direction={direction} setIndex={setIndex} />
     </div>

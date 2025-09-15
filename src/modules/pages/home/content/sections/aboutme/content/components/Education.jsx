@@ -32,18 +32,34 @@ export default function Education() {
           ))}
         </div>
 
-        <CornerBox animateKey={selected}>
-          <motion.div
-            key={selected}
-            layout
-            className="flex items-center gap-x-2"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: [1, 0, 1, 0, 1] }} // blink twice
-            transition={{ duration: 0.4, times: [0, 0.25, 0.5, 0.75, 1] }}
-          >
-            <Card data={items.find((item) => item.key === selected).data} />
-          </motion.div>
-        </CornerBox>
+<CornerBox animateKey={selected}>
+  <motion.div
+    key={selected}
+    layout
+    className="flex items-center"
+    initial={{ backgroundColor: "rgba(255,255,255,0)", color: "#ffffff" }}
+    animate={{
+      backgroundColor: [
+        "rgba(255,255,255,0)",
+        "rgba(255,255,255,0.7)",
+        "rgba(255,255,255,0)"
+      ],
+      color: [
+        "#ffffff",
+        "#000000",
+        "#ffffff"
+      ]
+    }}
+    transition={{ duration: 0.6, times: [0, 0.5, 1] }}
+  >
+
+    <Card data={items.find((item) => item.key === selected).data} />
+     
+  </motion.div>
+</CornerBox>
+
+
+
       </div>
 
       {/* Desktop */}

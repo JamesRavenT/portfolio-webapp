@@ -16,6 +16,7 @@ import { ICO_Realm } from '../icons/ICO_Realm';
 import { ICO_SQLite } from '../icons/ICO_SQLite';
 import { ICO_Tailwind } from '../icons/ICO_Tailwind';
 import { ICO_VSCode } from '../icons/ICO_VSCode';
+import { ICO_Placeholder } from '../icons/ICO_Placeholder';
 
 // Slides data with icons directly
 const skillset = [
@@ -32,6 +33,8 @@ const skillset = [
       { Icon: ICO_NodeJS, label: 'NodeJS' },
       { Icon: ICO_Git, label: 'Git' },
       { Icon: ICO_VSCode, label: 'VS Code' },
+      { Icon: ICO_Placeholder, label: '' },
+      ...Array(0).fill({ Icon: ICO_Placeholder, label: '-' })
     ],
   },
   {
@@ -45,6 +48,7 @@ const skillset = [
       { Icon: ICO_FireStore, label: 'Firestore' },
       { Icon: ICO_Git, label: 'Git' },
       { Icon: ICO_AndroidSTD, label: 'AD Studio' },
+      ...Array(3).fill({ Icon: ICO_Placeholder, label: '-' })
     ],
   },
   {
@@ -54,6 +58,7 @@ const skillset = [
     skills: [
       { Icon: ICO_CPP, label: 'C++' },
       { Icon: ICO_QT, label: 'Qt' },
+      ...Array(7).fill({ Icon: ICO_Placeholder, label: '-' })
     ],
   },
 ];

@@ -22,7 +22,7 @@ export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
               initial={{ y: '-100%', opacity: 0, rotate: 360 }}
               animate={{ y: 0, opacity: 1, rotate: isOpen ? 270 : 360 }}
               exit={{ y: '-100%', opacity: 0 }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              transition={{ duration: 0.2, ease: 'easeInOut' }}
               onClick={toggleMenu}
               className="relative z-[999] py-5 px-3 rounded rotate-270"
             >
@@ -38,7 +38,7 @@ export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
               initial={{ x: '-100%' }}
               animate={{ x: '0%' }}
               exit={{ x: '-100%' }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              transition={{ duration: 0.2, ease: 'easeInOut' }}
               className="fixed left-0 top-0 h-full w-[80%] z-[998] bg-gradient-to-r from-black via-black/75 to-black/0"
             >
               <div className="flex h-full px-10 pt-20 gap-x-5">

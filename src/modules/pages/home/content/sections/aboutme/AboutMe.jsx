@@ -6,7 +6,7 @@ export default function AboutMe() {
   return (
     <div
       id="aboutme"
-      className="flex flex-col justify-center min-h-[100vh]  w-full gap-y-3 font-electrolize"
+      className="flex flex-col justify-center min-h-screen w-full gap-y-3 font-electrolize"
     >
       <Background />
       <Content />

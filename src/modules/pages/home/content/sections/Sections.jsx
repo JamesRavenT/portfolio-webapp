@@ -26,7 +26,7 @@ export default function Section({ section }) {
               initial={triggerLineAnim ? { x: '-100%' } : { x: '0%' }}
               animate={{ x: '0%' }}
               exit={{ x: '-100%' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
               className="flex w-[60%] h-5 mr-auto border-r-2 origin-left justify-center items-center pr-3 "
             >
               <hr className="w-[100%] border-1 mr-auto origin-top" />
@@ -42,7 +42,7 @@ export default function Section({ section }) {
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              transition={{ duration: 0.2, ease: 'easeInOut' }}
               className="text-lg w-25 mx-5.5"
             >
               {section.toUpperCase()}

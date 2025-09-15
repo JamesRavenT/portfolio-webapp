@@ -4,9 +4,8 @@ import Education from '../components/Education';
 
 export default function MobileView() {
   return (
-    <div className="lg:hidden flex flex-col  justify-center gap-y-1">
-      <div className="w-full h-[5vh]" />
-      <div className="flex flex-col w-full h-[95vh]  justify-center">
+    <div className="lg:hidden flex flex-col h-screen items-center pt-25 gap-y-1 ">
+      <div className="flex flex-col w-full justify-center">
         <Catchphrase />
         <Description />
         <Education />

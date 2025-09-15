@@ -1,18 +1,14 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
-@theme { 
+@theme {
   --font-oxanium: 'Oxanium', sans-serif;
-  --font-saira: 'Saira Semi Condensed', sans-serif; 
+  --font-saira: 'Saira Semi Condensed', sans-serif;
   --font-orbitron: 'Orbitron', sans-serif;
-  --font-electrolize: 'Electrolize', sans-serif; 
+  --font-electrolize: 'Electrolize', sans-serif;
 }
-
-
-
 
 @utility scrollbar-hidden {
   &::-webkit-scrollbar {
@@ -20,7 +16,7 @@
   }
 }
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -30,16 +26,15 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
 
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-html, body {
- height: 100%;
+html,
+body {
+  height: 100%;
   /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
   overflow: hidden;
@@ -47,29 +42,43 @@ html, body {
 
 /* ANIMATIONS */
 @theme {
-    --animate-hint : hint 1.5s infinite;
+  --animate-hint: hint 1.5s infinite;
 
-    @keyframes hint {
-      0%, 100% {
-        transform: translateY(-5%);
-        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-      }
-      50% {
-        opacity: 0.5;
-        transform: none;
-        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-      }
+  @keyframes hint {
+    0%,
+    100% {
+      transform: translateY(-5%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
-
+    50% {
+      opacity: 0.5;
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
 }
 
 .mask-fade {
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 40%, black 60%,  black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 40%,
+    black 60%,
+    black 80%,
+    transparent 100%
+  );
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 40%, black 60%, black 80%, transparent 100%);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 40%,
+    black 60%,
+    black 80%,
+    transparent 100%
+  );
   mask-repeat: no-repeat;
   mask-size: cover;
 }
-
-

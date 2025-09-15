@@ -28,7 +28,7 @@ export default function Fortes({ index, direction, setIndex }) {
   });
 
   return (
-    <div className="flex flex-col h-65 md:h-35 md:mt-20 items-center justify-center gap-y-5 pt-5 w-full">
+    <div className="flex flex-col h-65 lg:h-45 lg:mt-20 items-center justify-center gap-y-5 pt-5 w-full">
       <div className="relative flex justify-center items-center w-full overflow-hidden">
         <AnimatePresence mode="wait" initial={false} custom={direction}>
           <motion.div
