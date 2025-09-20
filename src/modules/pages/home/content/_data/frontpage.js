@@ -22,7 +22,7 @@ const resume = {
   text3: '- RESUME -',
   qr: '/images/resume-qr.png',
   link: 'https://docs.google.com/document/d/1dzSsqBpjQZ5WDe_AOqP2Ozee79v5ErxAYpsefPGlhRA/edit?tab=t.0',
-  openLink: () => window.open(resume.link, "_blank"),
+  openLink: () => window.open(resume.link, '_blank'),
 };
 
 const github = {
@@ -31,7 +31,7 @@ const github = {
   icon: ICO_Github,
   link: 'https://github.com/JamesRavenT',
   altlink: 'github.com/JamesRavenT',
-  openLink: () => window.open(github.link, "_blank"),
+  openLink: () => window.open(github.link, '_blank'),
 };
 
 const linkedIn = {
@@ -40,7 +40,7 @@ const linkedIn = {
   icon: ICO_LinkedIn,
   link: 'https://www.linkedin.com/in/jamesravent/',
   altlink: 'linkedin.com/in/jamesravent/',
-  openLink: () => window.open(linkedIn.link, "_blank"),
+  openLink: () => window.open(linkedIn.link, '_blank'),
 };
 
 const sections = {

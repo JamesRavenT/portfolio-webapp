@@ -3,20 +3,21 @@ import { useSectionRefs } from '../../_hooks/useSectionRef';
 import Content from './content/Content';
 
 export default function Navbar({ section }) {
-  const { frontpageRef, aboutmeRef, skillsRef, projectsRef } = useSectionRefs();
+  const { frontpageRef, aboutmeRef, skillsRef, projectsRef, contactsRef } = useSectionRefs();
   const scrollToSection = (id) => {
     const refs = {
       frontpage: frontpageRef,
       aboutme: aboutmeRef,
       skills: skillsRef,
       projects: projectsRef,
+      contacts: contactsRef,
     };
     refs[id]?.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <ScrollContext.Provider
-      value={{ scrollToSection, frontpageRef, aboutmeRef, skillsRef, projectsRef }}
+      value={{ scrollToSection, frontpageRef, aboutmeRef, skillsRef, projectsRef, contactsRef }}
     >
       <div className="w-full">
         <Content section={section} />

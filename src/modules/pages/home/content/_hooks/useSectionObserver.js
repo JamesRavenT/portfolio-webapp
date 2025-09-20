@@ -23,6 +23,9 @@ export function useSectionObserver(refs, setSection) {
           case 'projects':
             setSection('Projects');
             break;
+          case 'contacts':
+            setSection('contacts');
+            break;
           default:
             break;
         }

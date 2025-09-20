@@ -21,8 +21,6 @@ export default function MobileView({ section }) {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 }

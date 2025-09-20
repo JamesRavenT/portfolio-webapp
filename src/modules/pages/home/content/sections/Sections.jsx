@@ -6,14 +6,14 @@ export default function Section({ section }) {
   const [triggerLineAnim, setTriggerLineAnim] = useState(false);
 
   useEffect(() => {
-    if (prevSection.current === '' && section !== '') {
+    if (prevSection.current === '' && section !== '' && section !== 'contacts') {
       setTriggerLineAnim(false);
       setTimeout(() => setTriggerLineAnim(true), 600);
     }
     prevSection.current = section;
   }, [section]);
 
-  const show = section !== '';
+  const show = section !== '' && section !== 'contacts';
 
   return (
     <div className="sticky top-13 z-40 w-full h-6 font-electrolize">

@@ -16,7 +16,7 @@ export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
     <nav className="lg:hidden flex fixed top-0 left-0 w-full items-center justify-between px-4 py-3 z-50 ">
       <div className="flex mr-auto items-center gap-x-2">
         <AnimatePresence mode="wait">
-          {section !== '' && (
+          {section !== '' && section !== 'contacts' && (
             <motion.button
               key="menu-mobile"
               initial={{ y: '-100%', opacity: 0, rotate: 360 }}

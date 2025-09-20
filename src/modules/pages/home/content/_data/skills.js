@@ -34,7 +34,7 @@ const skillset = [
       { Icon: ICO_Git, label: 'Git' },
       { Icon: ICO_VSCode, label: 'VS Code' },
       { Icon: ICO_Placeholder, label: '' },
-      ...Array(0).fill({ Icon: ICO_Placeholder, label: '-' })
+      ...Array(0).fill({ Icon: ICO_Placeholder, label: '-' }),
     ],
   },
   {
@@ -48,7 +48,7 @@ const skillset = [
       { Icon: ICO_FireStore, label: 'Firestore' },
       { Icon: ICO_Git, label: 'Git' },
       { Icon: ICO_AndroidSTD, label: 'AD Studio' },
-      ...Array(3).fill({ Icon: ICO_Placeholder, label: '-' })
+      ...Array(3).fill({ Icon: ICO_Placeholder, label: '-' }),
     ],
   },
   {
@@ -58,7 +58,7 @@ const skillset = [
     skills: [
       { Icon: ICO_CPP, label: 'C++' },
       { Icon: ICO_QT, label: 'Qt' },
-      ...Array(7).fill({ Icon: ICO_Placeholder, label: '-' })
+      ...Array(7).fill({ Icon: ICO_Placeholder, label: '-' }),
     ],
   },
 ];

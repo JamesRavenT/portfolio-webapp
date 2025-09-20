@@ -4,15 +4,16 @@ import { useSectionObserver } from './content/_hooks/useSectionObserver';
 import { useSmoothScrollSnap } from './content/_hooks/useSmoothScrollSnap';
 
 import Frontpage from './content/sections/frontpage/Frontpage';
-import Projects from './components/projects/Projects';
+import Projects from './content/sections/projects/Projects';
 import Skills from './content/sections/skills/Skills';
 import AboutMe from './content/sections/aboutme/AboutMe';
 import Category from './content/sections/Sections';
+import Contacts from './content/sections/contacts/Contacts';
 
 export default function Home({ section, setSection }) {
   const containerRef = useRef(null);
-  const { frontpageRef, aboutmeRef, skillsRef, projectsRef } = useScroll();
-  const refs = [frontpageRef, aboutmeRef, skillsRef, projectsRef];
+  const { frontpageRef, aboutmeRef, skillsRef, projectsRef, contactsRef } = useScroll();
+  const refs = [frontpageRef, aboutmeRef, skillsRef, projectsRef, contactsRef];
 
   // Hooks
   useSmoothScrollSnap(containerRef, refs);
@@ -35,6 +36,9 @@ export default function Home({ section, setSection }) {
       </section>
       <section ref={projectsRef} id="projects" className="relative snap-start h-screen">
         <Projects />
+      </section>
+      <section ref={contactsRef} id="contacts" className="relative snap-start h-screen">
+        <Contacts />
       </section>
     </div>
   );

@@ -5,5 +5,7 @@ export function useSectionRefs() {
   const aboutmeRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
-  return { frontpageRef, aboutmeRef, skillsRef, projectsRef };
+  const contactsRef = useRef(null); // <-- add this
+
+  return { frontpageRef, aboutmeRef, skillsRef, projectsRef, contactsRef };
 }

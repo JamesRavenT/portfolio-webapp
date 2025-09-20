@@ -1,4 +1,4 @@
-import { background } from '../../../../_data/background';
+import { background } from '../../../../_config/background';
 
 export default function Background() {
   return (

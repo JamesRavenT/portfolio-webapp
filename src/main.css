@@ -82,3 +82,9 @@ body {
   mask-repeat: no-repeat;
   mask-size: cover;
 }
+
+@layer utilities {
+  .fade-top {
+    @apply absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/50 to-transparent;
+  }
+}

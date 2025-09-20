@@ -18,6 +18,14 @@ module.exports = {
       animation: {
         hint: 'hint 1.5s infinite',
       },
+      screens: {
+        // Height-based custom breakpoints
+        'h-sm': { 'raw': '(min-height: 640px)' },   // small height
+        'h-md': { 'raw': '(min-height: 768px)' },   // medium height
+        'h-lg': { 'raw': '(min-height: 1024px)' },  // large height
+        'h-xl': { 'raw': '(min-height: 1280px)' },  // extra large height
+        'h-2xl': { 'raw': '(min-height: 1536px)' }, // 2xl height
+      },
     },
   },
   plugins: [],

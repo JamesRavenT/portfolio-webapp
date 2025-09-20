@@ -4,11 +4,13 @@ import Sections from '../Sections';
 import { ScrollHandlePos } from '../ScrollHandle';
 
 export default function DesktopView({ section, isOpen, toggleMenu }) {
+  if (section === 'contacts') return null; // <-- hide if contacts
+
   return (
     <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-70 z-60 flex-col items-start">
       {/* Adjust page depending on section*/}
       <div
-        className={`flex flex-col m-5  transition-all duration-1000 ease-in-out ${
+        className={`flex flex-col m-5 transition-all duration-1000 ease-in-out ${
           section !== '' ? 'pt-25 ' : 'pt-50 '
         }`}
       >

@@ -8,6 +8,7 @@ export default function Sections({ section, closeMenu }) {
     { id: 'aboutme', label: 'ABOUT ME' },
     { id: 'skills', label: 'SKILLS' },
     { id: 'projects', label: 'PROJECTS' },
+    { id: 'contacts', label: '' },
   ];
 
   return (
@@ -15,7 +16,8 @@ export default function Sections({ section, closeMenu }) {
       {menuItems.map((item) => {
         const isActive =
           section.toLowerCase() === item.label.toLowerCase() ||
-          (item.id === 'frontpage' && section === '');
+          (item.id === 'frontpage' && section === '') ||
+          item.id === 'contacts';
 
         return (
           <li key={item.id}>
