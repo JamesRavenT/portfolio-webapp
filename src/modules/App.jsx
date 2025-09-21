@@ -1,10 +1,18 @@
-import { useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+/**
+ * App.jsx
+ * Root application component with routing setup
+ * Cleaned for v1.0.0 release
+ * Last Updated: 09/21
+ */
+
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
-import Projects from './pages/projects/Projects';
 import Navbar from './navbar/Navbar';
+import PageNotFound from './pages/_null/PageNotFound';
 
 export default function App() {
+  //State hook to manage the currently active section on the homepage
   const [section, setSection] = useState('');
 
   return (
@@ -12,8 +20,8 @@ export default function App() {
       <Routes>
         <Route element={<Navbar section={section} />}>
           <Route path="/" element={<Home section={section} setSection={setSection} />} />
-          <Route path="/projects" element={<Projects />} />
         </Route>
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );

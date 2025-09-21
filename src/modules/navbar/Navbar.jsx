@@ -1,3 +1,10 @@
+/**
+ * Navbar.jsx
+ * Navbar Main Component
+ * Cleaned for v1.0.0 release
+ * Last Updated: 09/21
+ */
+
 import { ScrollContext } from '../../_hooks/useScroll';
 import { useSectionRefs } from '../../_hooks/useSectionRef';
 import Content from './content/Content';

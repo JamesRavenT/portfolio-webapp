@@ -1,3 +1,10 @@
+/**
+ * main.css
+ * Global stylesheet for the application
+ * Cleaned for v1.0.0 release
+ * Last Updated: 09/21
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
@@ -35,7 +42,6 @@
 html,
 body {
   height: 100%;
-  /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
   overflow: hidden;
 }
@@ -55,36 +61,5 @@ body {
       transform: none;
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
-  }
-}
-
-.mask-fade {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 20%,
-    black 40%,
-    black 60%,
-    black 80%,
-    transparent 100%
-  );
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 20%,
-    black 40%,
-    black 60%,
-    black 80%,
-    transparent 100%
-  );
-  mask-repeat: no-repeat;
-  mask-size: cover;
-}
-
-@layer utilities {
-  .fade-top {
-    @apply absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black/50 to-transparent;
   }
 }
