@@ -49,4 +49,17 @@ const sections = {
   projects: 'Projects',
 };
 
-export { wallpaper, headlines, greetings, resume, github, linkedIn, sections };
+const labels = {
+  linktocontacts: 'Interested? Click on this text to leave a message!',
+};
+
+export {
+  wallpaper,
+  headlines,
+  greetings,
+  resume,
+  github,
+  linkedIn,
+  sections,
+  labels,
+};

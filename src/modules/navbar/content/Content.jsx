@@ -1,8 +1,8 @@
 /**
  * Content.jsx
  * Houses the layouts for the Mobile and Desktop View
- * Cleaned for v1.0.0 release
- * Last Updated: 09/21
+ * Finalized for v1.0.0 release
+ * Last Updated: 09/22
  */
 
 import { useState } from 'react';
@@ -17,14 +17,19 @@ export default function Content({ section }) {
 
   return (
     <>
-      <MobileView section={section} isOpen={isOpen} setIsOpen={setIsOpen} toggleMenu={toggleMenu} />
+      <MobileView
+        section={section}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        toggleMenu={toggleMenu}
+      />
       <DesktopView
         section={section}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         toggleMenu={toggleMenu}
       />
-      <main className="min-h-screen overflow-auto snap-y snap-mandatory scroll-smooth">
+      <main className="h-[100dvh] overflow-auto snap-y snap-mandatory scroll-smooth">
         <Outlet />
       </main>
     </>

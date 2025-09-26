@@ -1,8 +1,8 @@
 /**
  * DesktopView.jsx
  * Sidebar navigation for large screens
- * Cleaned for v1.0.0 release
- * Last Updated: 09/21
+ * Finalized for v1.0.0 release
+ * Last Updated: 09/22
  */
 
 import { Menu } from 'lucide-react';
@@ -19,7 +19,7 @@ export default function DesktopView({ section, isOpen, toggleMenu }) {
       {/* Adjusts top padding based on active section */}
       <div
         className={`flex flex-col m-5 transition-all duration-1000 ease-in-out ${
-          section !== '' ? 'pt-25' : 'pt-50'
+          section !== '' ? 'pt-25' : 'pt-45'
         }`}
       >
         {/* Menu toggle button */}

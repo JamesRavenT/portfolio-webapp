@@ -5,8 +5,8 @@ export default function SkillIcon({ Icon, label }) {
         transition-colors duration-100
         hover:bg-gradient-to-r from-transparent via-white to-transparent hover:text-black"
     >
-      <Icon className="size-5 md:size-10 shadow-2xl" />
-      <p className="text-xs md:text-lg ">{label}</p>
+      <Icon className="size-5 lg:size-8 shadow-2xl" />
+      <p className="text-xs lg:text-base ">{label}</p>
     </div>
   );
 }

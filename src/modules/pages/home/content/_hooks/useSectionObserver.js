@@ -30,7 +30,7 @@ export function useSectionObserver(refs, setSection) {
             break;
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     refs.forEach((ref) => {

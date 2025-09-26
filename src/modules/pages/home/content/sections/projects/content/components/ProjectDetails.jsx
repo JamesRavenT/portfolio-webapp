@@ -25,7 +25,7 @@ export default function ProjectDetails({ project }) {
       </div>
 
       {/**LAPTOP VIEW */}
-      <CornerBox className="hidden lg:flex flex-col h-full w-full px-5 z-20 pt-12 gap-y-3 bg-black/50">
+      <CornerBox className="hidden lg:flex flex-col h-full w-full px-5 z-20 pt-12 gap-y-3 bg-black/70">
         <ProjectHeader project={project} />
         <Divider />
         <div className="grid grid-cols-2 gap-x-4 mt-3">

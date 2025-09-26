@@ -1,7 +1,11 @@
 import { useState } from 'react';
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
 
   const handleChange = (e) => {
@@ -79,7 +83,9 @@ export default function ContactForm() {
           {status === 'sending' ? 'Sending...' : 'Send'}
         </button>
 
-        {status === 'success' && <p className="text-green-400 mt-2">Message sent! Thank you.</p>}
+        {status === 'success' && (
+          <p className="text-green-400 mt-2">Message sent! Thank you.</p>
+        )}
         {status === 'error' && (
           <p className="text-red-400 mt-2">Something went wrong. Try again.</p>
         )}

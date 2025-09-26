@@ -1,15 +1,15 @@
 /**
  * MobileView.jsx
  * Mobile navigation component
- * Cleaned for v1.0.0 release
- * Last Updated: 09/21
+ * Finalized for v1.0.0 release
+ * Last Updated: 09/22
  */
 
 import { Menu } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useMenuScrollRestrictions } from '../_hooks/useMenuScrollRestrictions';
 import { useMenuCloseIfTop } from '../_hooks/useMenuCloseIfTop';
-import { useMenuCloseIfEsc } from '../_hooks/useMenuCloseIfEsc'
+import { useMenuCloseIfEsc } from '../_hooks/useMenuCloseIfEsc';
 import { ScrollHandle } from '../components/ScrollHandle';
 import Sections from '../components/Sections';
 
@@ -22,7 +22,6 @@ export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
   return (
     <nav className="lg:hidden fixed top-0 left-0 w-full flex items-center justify-between px-4 py-3 z-50">
       <div className="flex items-center gap-x-2 mr-auto">
-
         {/* Mobile menu button */}
         <AnimatePresence mode="wait">
           {section && section !== 'contacts' && (
@@ -54,7 +53,10 @@ export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
               <div className="flex h-full px-10 pt-20 gap-x-5">
                 <ScrollHandle section={section} />
                 <ul className="flex flex-col pt-10 space-y-10 text-white">
-                  <Sections section={section} closeMenu={() => setIsOpen(false)} />
+                  <Sections
+                    section={section}
+                    closeMenu={() => setIsOpen(false)}
+                  />
                 </ul>
               </div>
             </motion.div>
@@ -62,6 +64,5 @@ export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
         </AnimatePresence>
       </div>
     </nav>
-
   );
 }

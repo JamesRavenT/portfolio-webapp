@@ -1,4 +1,9 @@
-export const createDragEndHandler = ({ index, slidesLength, isDesktop, paginate }) => {
+export const createDragEndHandler = ({
+  index,
+  slidesLength,
+  isDesktop,
+  paginate,
+}) => {
   return (_, { offset }) => {
     const offsetValue = isDesktop ? offset.y : offset.x;
     const threshold = 100;

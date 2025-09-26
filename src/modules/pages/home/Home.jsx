@@ -12,32 +12,57 @@ import Contacts from './content/sections/contacts/Contacts';
 
 export default function Home({ section, setSection }) {
   const containerRef = useRef(null);
-  const { frontpageRef, aboutmeRef, skillsRef, projectsRef, contactsRef } = useScroll();
+  const { frontpageRef, aboutmeRef, skillsRef, projectsRef, contactsRef } =
+    useScroll();
   const refs = [frontpageRef, aboutmeRef, skillsRef, projectsRef, contactsRef];
 
   // Hooks
   useSmoothScrollSnap(containerRef, refs);
   useSectionObserver(refs, setSection);
 
+  window.addEventListener('resize', () => {
+    console.log('Viewport height:', window.innerHeight);
+  });
+
   return (
     <div
       ref={containerRef}
-      className="flex flex-col relative z-10 h-screen overflow-y-auto snap-container snap-y snap-mandatory scrollbar-hidden"
+      className="flex flex-col relative z-10 h-[100dvh] overflow-y-auto snap-container snap-y snap-mandatory scrollbar-hidden"
     >
       <Category section={section} />
-      <section ref={frontpageRef} id="frontpage" className="relative snap-start h-screen">
+      <section
+        ref={frontpageRef}
+        id="frontpage"
+        className="relative snap-start h-[100dvh]"
+      >
         <Frontpage section={section} />
       </section>
-      <section ref={aboutmeRef} id="aboutme" className="relative snap-start h-screen">
+      <section
+        ref={aboutmeRef}
+        id="aboutme"
+        className="relative snap-start h-[100dvh]"
+      >
         <AboutMe />
       </section>
-      <section ref={skillsRef} id="skills" className="relative snap-start h-screen">
+      <section
+        ref={skillsRef}
+        id="skills"
+        className="relative snap-start h-[100dvh]"
+      >
         <Skills />
       </section>
-      <section ref={projectsRef} id="projects" className="relative snap-start h-screen">
+      <section
+        ref={projectsRef}
+        id="projects"
+        className="relative snap-start h-[100dvh]"
+      >
         <Projects />
       </section>
-      <section ref={contactsRef} id="contacts" className="relative snap-start h-screen">
+      <section
+        ref={contactsRef}
+        id="contacts"
+        className="relative snap-start h-[100dvh]"
+      >
         <Contacts />
       </section>
     </div>

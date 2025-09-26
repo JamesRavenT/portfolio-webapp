@@ -1,8 +1,8 @@
 /**
  * App.jsx
  * Root application component with routing setup
- * Cleaned for v1.0.0 release
- * Last Updated: 09/21
+ * Finalized for v1.0.0 release
+ * Last Updated: 09/22
  */
 
 import { useState } from 'react';
@@ -19,7 +19,10 @@ export default function App() {
     <Router>
       <Routes>
         <Route element={<Navbar section={section} />}>
-          <Route path="/" element={<Home section={section} setSection={setSection} />} />
+          <Route
+            path="/"
+            element={<Home section={section} setSection={setSection} />}
+          />
         </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

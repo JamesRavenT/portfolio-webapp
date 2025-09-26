@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-export default function useIsDesktop(breakpoint = 768) {
+function useWindowSizeChecker(breakpoint = 768) {
   const [isDesktop, setIsDesktop] = useState(
-    typeof window !== 'undefined' ? window.innerWidth >= breakpoint : false
+    typeof window !== 'undefined' ? window.innerWidth >= breakpoint : false,
   );
 
   useEffect(() => {
@@ -13,3 +13,5 @@ export default function useIsDesktop(breakpoint = 768) {
 
   return isDesktop;
 }
+
+export { useWindowSizeChecker };

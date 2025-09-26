@@ -1,7 +1,8 @@
 /**
- * sectionRef.js
- * Cleaned for v1.0.0 release
- * Last Updated 09/21
+ * useSectionRef.js
+ * Custom hook that provides references for key page sections to enable scroll and navigation control
+ * Finalized for v1.0.0 release
+ * Last Updated: 09/22
  */
 
 import { useRef } from 'react';

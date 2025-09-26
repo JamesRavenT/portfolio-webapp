@@ -1,8 +1,8 @@
 const background = {
   frontpage: '/backgrounds/frontpage.mp4',
-  aboutme: '/backgrounds/aboutme.jpg',
-  skills: '/backgrounds/aboutme.jpg',
-  projects: '/backgrounds/aboutme.jpg',
+  aboutme: '/backgrounds/aboutme.png',
+  skills: '/backgrounds/skills.png',
+  projects: '/backgrounds/projects.jpg',
 };
 
 export { background };

@@ -1,7 +1,8 @@
 /**
  * useScroll.js
- * Cleaned for v1.0.0 release
- * Last Updated 09/21
+ * Provides a React Context and hook for accessing scroll-related state
+ * Finalized for v1.0.0 release
+ * Last Updated 09/22
  */
 
 import { createContext, useContext } from 'react';

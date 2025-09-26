@@ -1,7 +1,9 @@
 export default function ProjectHeader({ project }) {
   return (
     <>
-      <p className="text-3xl lg:text-6xl font-bold text-white">{project.name}</p>
+      <p className="text-3xl lg:text-6xl font-bold text-white">
+        {project.name}
+      </p>
       <div className="flex items-center gap-x-2 lg:gap-x-4 lg:mt-2">
         <p className="text-gray-300 text-sm lg:text-2xl">{project.version}</p>
         <div className="h-full w-0.5 bg-gray-400" />

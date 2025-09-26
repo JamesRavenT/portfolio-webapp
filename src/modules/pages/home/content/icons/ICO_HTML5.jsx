@@ -8,7 +8,10 @@ export function ICO_HTML5(props) {
       {...props}
     >
       {/* Icon from Devicon by konpa - https://github.com/devicons/devicon/blob/master/LICENSE */}
-      <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z" />
+      <path
+        fill="#E44D26"
+        d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z"
+      />
       <path fill="#F16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z" />
       <path
         fill="#EBEBEB"

@@ -1,22 +1,21 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import useIsDesktop from '../../../../../../../../_hooks/GetWindowSize';
-
+import { useWindowSizeChecker } from '../../../../_hooks/useWindowSizeChecker';
 import SkillTree from './ui/SkillTree';
 import PageMarker from './PageMarker';
-
-// Utilities
 import { paginate as paginateUtil } from '../../../../_utils/pagination';
 import { getVariants } from '../../../../_utils/variants';
 import { createDragEndHandler } from '../../../../_utils/dragHandlers';
-
 import { skillset } from '../../../../_data/skills';
 
 export default function Fortes({ index, direction, setIndex }) {
-  const isDesktop = useIsDesktop(768);
+  const isDesktop = useWindowSizeChecker(768);
   const { Icon, title, description } = skillset[index];
 
   const paginate = (dir) => {
-    setIndex(([prevIndex]) => [paginateUtil(prevIndex, dir, skillset.length - 1), dir]);
+    setIndex(([prevIndex]) => [
+      paginateUtil(prevIndex, dir, skillset.length - 1),
+      dir,
+    ]);
   };
 
   const variants = getVariants(isDesktop);
@@ -28,7 +27,7 @@ export default function Fortes({ index, direction, setIndex }) {
   });
 
   return (
-    <div className="flex flex-col h-65 lg:h-45 lg:mt-20 items-center justify-center gap-y-5 pt-5 w-full">
+    <div className="flex flex-col h-65 lg:h-fit lg:m-5  items-center justify-center gap-y-5  w-full">
       <div className="relative flex justify-center items-center w-full overflow-hidden">
         <AnimatePresence mode="wait" initial={false} custom={direction}>
           <motion.div

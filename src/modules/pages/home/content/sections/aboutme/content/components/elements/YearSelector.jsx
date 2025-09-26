@@ -20,8 +20,12 @@ export default function YearSelector({ item, isActive, onSelect }) {
       )}
 
       <div className="relative flex gap-x-2 items-center z-10">
-        <div className={`w-[10px] h-[10px] ${isActive ? 'bg-black' : 'bg-white'}`} />
-        <p className={`text-base ${isActive ? 'text-black' : 'text-white'}`}>{item.label}</p>
+        <div
+          className={`w-[10px] h-[10px] ${isActive ? 'bg-black' : 'bg-white'}`}
+        />
+        <p className={`text-base ${isActive ? 'text-black' : 'text-white'}`}>
+          {item.label}
+        </p>
       </div>
     </motion.div>
   );

@@ -6,7 +6,11 @@ export default function Section({ section }) {
   const [triggerLineAnim, setTriggerLineAnim] = useState(false);
 
   useEffect(() => {
-    if (prevSection.current === '' && section !== '' && section !== 'contacts') {
+    if (
+      prevSection.current === '' &&
+      section !== '' &&
+      section !== 'contacts'
+    ) {
       setTriggerLineAnim(false);
       setTimeout(() => setTriggerLineAnim(true), 600);
     }

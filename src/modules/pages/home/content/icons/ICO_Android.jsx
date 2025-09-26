@@ -1,6 +1,12 @@
 export function ICO_Android(props) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32" {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 32 32"
+      {...props}
+    >
       {/* Icon from Material Icon Theme by Material Extensions - https://github.com/material-extensions/vscode-material-icon-theme/blob/main/LICENSE */}
       <rect width="4" height="10" x="2" y="12" fill="#8bc34a" rx="2" />
       <rect width="4" height="10" x="26" y="12" fill="#8bc34a" rx="2" />

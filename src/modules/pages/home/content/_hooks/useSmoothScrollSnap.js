@@ -20,7 +20,10 @@ export function useSmoothScrollSnap(containerRef, refs) {
           ? Math.floor(container.scrollTop / sectionHeight)
           : Math.ceil(container.scrollTop / sectionHeight);
 
-      const nextIndex = Math.min(sections.length - 1, Math.max(0, currentIndex + direction));
+      const nextIndex = Math.min(
+        sections.length - 1,
+        Math.max(0, currentIndex + direction),
+      );
 
       if (sections[nextIndex]) {
         isScrolling = true;

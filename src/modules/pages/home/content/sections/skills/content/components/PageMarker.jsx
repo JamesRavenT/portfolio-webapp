@@ -15,20 +15,22 @@ export default function PageMarker({ index, setIndex, skillset = [] }) {
   return (
     <>
       {/* MOBILE MARKERS */}
-      <div className="lg:hidden flex absolute top-65 gap-x-5 mt-10 items-center">
+      <div className="lg:hidden flex absolute top-65 gap-x-5 mt-10 items-center ">
         {skillset.map((_, i) => (
           <div
             key={i}
             onClick={() => handleClick(i)}
             className={`cursor-pointer transition-all duration-300 transform ${
-              i === index ? 'w-2 h-2 bg-white rotate-45' : 'w-1 h-1 bg-gray-500 rotate-0'
+              i === index
+                ? 'w-2 h-2 bg-white rotate-45'
+                : 'w-1 h-1 bg-gray-500 rotate-0'
             }`}
           />
         ))}
       </div>
 
       {/* DESKTOP MARKERS */}
-      <div className="hidden lg:flex flex-col absolute top-45 right-0 gap-y-30 items-center w-60 h-[100vh] bg-gradient-to-l from-black via-black/50 to-transparent">
+      <div className="hidden lg:flex  absolute top-160 gap-x-50 items-center">
         {skillset.map((slide, i) => {
           const Icon = slide.Icon;
           const isActive = i === index;
@@ -36,12 +38,12 @@ export default function PageMarker({ index, setIndex, skillset = [] }) {
 
           return (
             <div key={i} className="w-full flex items-center justify-center">
-              <div className="relative w-25 h-25">
-                {/* Background shadow (offset when idle, moves up + blinks when clicked) */}
+              <div className="relative w-14 h-14">
+                {/* Background shadow */}
                 <motion.div
                   key={isClicked ? `shadow-active-${i}` : `shadow-idle-${i}`}
                   initial={{
-                    top: '1.25rem', // offset downward
+                    top: '1rem', // smaller offset
                     opacity: 0.5,
                     backgroundColor: '#ffffff33',
                   }}
@@ -49,48 +51,36 @@ export default function PageMarker({ index, setIndex, skillset = [] }) {
                     isActive
                       ? {
                           top: 0,
-                          opacity: [0.5, 1], // blink once
+                          opacity: [0.5, 1],
                           backgroundColor: '#ffffff',
+                          scale: 1.15,
                         }
                       : {
-                          top: '1.25rem',
+                          top: '1rem',
                           opacity: 0.5,
                           backgroundColor: '#ffffff33',
+                          scale: 0.9,
                         }
                   }
                   transition={{ duration: 0.6, ease: 'easeInOut' }}
-                  className="absolute rotate-45 w-20 h-20 rounded-md z-10"
-                />
-
-                {/* Sliding background(from right) */}
-                <motion.div
-                  key={isActive ? `bg-in-${i}` : `bg-out-${i}`}
-                  initial={{ x: '100%', opacity: 0 }}
-                  animate={isActive ? { x: 0, opacity: 1 } : { x: '100%', opacity: 0 }}
-                  transition={{
-                    duration: 0.45,
-                    delay: isActive ? 0.2 : 0,
-                    ease: 'easeOut',
-                  }}
-                  className="absolute -translate-x-[10px] -translate-y-[28px] w-50 h-34 rounded-md z-0 pointer-events-none"
-                  style={{
-                    background:
-                      'linear-gradient(90deg, transparent, rgba(255,255,255,0.5), rgba(255,255,255,1.24))',
-                  }}
+                  className="absolute w-14 h-14 rounded-md z-10 rotate-45"
+                  style={{ transformOrigin: 'center' }}
                 />
 
                 {/* Main clickable icon */}
                 <motion.div
                   onClick={() => handleClick(i)}
-                  className={`relative flex items-center justify-center p-5  border-1 cursor-pointer w-20 h-20 shadow-xl z-20 rounded-md ${
-                    isActive ? 'rotate-45 scale-120' : 'rotate-45 scale-100'
+                  className={`relative flex items-center justify-center cursor-pointer w-14 h-14 shadow-xl z-20 rounded-md border-1 ${
+                    isActive ? 'rotate-45 scale-130' : 'rotate-45 scale-90'
                   }`}
                   animate={isActive ? { opacity: [1, 0.4, 1] } : { opacity: 1 }}
                   transition={{ duration: 0.55, ease: 'easeInOut' }}
                 >
                   <Icon
-                    className={`w-18 h-18 transition-colors duration-300 ${
-                      isActive ? 'text-black rotate-315' : 'text-white rotate-315'
+                    className={`w-8 h-8  transition-colors duration-300 ${
+                      isActive
+                        ? 'text-black rotate-315 p-0.5'
+                        : 'text-white rotate-315 p-1'
                     }`}
                   />
                 </motion.div>

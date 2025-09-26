@@ -68,8 +68,16 @@ export function ICO_VSCode(props) {
           <feOffset />
           <feGaussianBlur stdDeviation="4.167" />
           <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-          <feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36" />
-          <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape" />
+          <feBlend
+            in2="BackgroundImageFix"
+            mode="overlay"
+            result="effect1_dropShadow_1_36"
+          />
+          <feBlend
+            in="SourceGraphic"
+            in2="effect1_dropShadow_1_36"
+            result="shape"
+          />
         </filter>
         <filter
           id="SVGNFFJfeJv"
@@ -89,8 +97,16 @@ export function ICO_VSCode(props) {
           <feOffset />
           <feGaussianBlur stdDeviation="4.167" />
           <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-          <feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36" />
-          <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape" />
+          <feBlend
+            in2="BackgroundImageFix"
+            mode="overlay"
+            result="effect1_dropShadow_1_36"
+          />
+          <feBlend
+            in="SourceGraphic"
+            in2="effect1_dropShadow_1_36"
+            result="shape"
+          />
         </filter>
         <linearGradient
           id="SVGCuCWAcYL"

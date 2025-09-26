@@ -37,7 +37,10 @@ export default function Education() {
             key={selected}
             layout
             className="flex items-center"
-            initial={{ backgroundColor: 'rgba(255,255,255,0)', color: '#ffffff' }}
+            initial={{
+              backgroundColor: 'rgba(255,255,255,0)',
+              color: '#ffffff',
+            }}
             animate={{
               backgroundColor: [
                 'rgba(255,255,255,0)',
