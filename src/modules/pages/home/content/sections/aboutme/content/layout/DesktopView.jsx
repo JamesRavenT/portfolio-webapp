@@ -1,10 +1,17 @@
+/**
+ * MobileView.jsx
+ * Mobile and Tablet Layout for AboutMe
+ * Finalized for v1.0.0 release
+ * Last Updated: 09/26
+ */
+
 import Catchphrase from '../components/Catchphrase';
 import Description from '../components/Description';
 import Education from '../components/Education';
 
 export default function DesktopView() {
   return (
-    <div className="hidden lg:flex flex-col w-full items-center pt-20 justify-center">
+    <div className="hidden lg:flex flex-col w-full items-center justify-center aboutme-layout-monitor gap-y-2 h-[100dvh]">
       <Catchphrase />
       <Description />
       <hr className="w-[60%] border-0.5 my-5" />

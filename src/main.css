@@ -2,7 +2,7 @@
  * main.css
  * Global stylesheet for the application
  * Finalized for v1.0.0 release
- * Last Updated: 09/22
+ * Last Updated: 09/26
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
@@ -66,4 +66,30 @@ body {
 
 #home:target {
   opacity: 1;
+}
+
+@media (min-height: 900px) {
+  .aboutme-layout-monitor {
+    justify-content: initial;
+    margin-top: 6rem;
+  }
+
+  .aboutme-text-header-monitor {
+    font-size: 4rem;
+  }
+
+  .aboutme-text-description-monitor {
+    font-size: 1.3rem;
+    margin: 1.5rem;
+  }
+
+  .aboutme-education-header-monitor {
+    font-size: 1.5rem;
+    margin: 2rem;
+  }
+
+  .aboutme-education-card-monitor {
+    column-gap: 3rem;
+    transform: scale(1.23);
+  }
 }

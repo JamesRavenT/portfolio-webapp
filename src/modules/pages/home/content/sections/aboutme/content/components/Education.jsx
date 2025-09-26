@@ -1,6 +1,12 @@
+/**
+ * Education.jsx
+ * Education Component that states academic background.
+ * Finalized for v1.0.0 release
+ * Last Updated: 09/26
+ */
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap } from 'lucide-react';
 import { education } from '../../../../_data/aboutme';
 import YearSelector from './elements/YearSelector';
 import CornerBox from './ui/CornerBox';
@@ -17,7 +23,7 @@ export default function Education() {
   return (
     <>
       {/* Mobile */}
-      <div className="md:hidden flex flex-col items-center w-full gap-y-3 ">
+      <div className="lg:hidden flex flex-col items-center w-full gap-y-3 mt-5 ">
         <hr className="w-[90%] border-0.5" />
         <p className="text-sm self-start mx-5">{education.header}</p>
 
@@ -57,10 +63,9 @@ export default function Education() {
       </div>
 
       {/* Desktop */}
-
-      <div className="hidden lg:flex flex-col w-full h-[6rem] justify-center items-center my-2">
-        <p className="text-xl mx-5 my-2">{education.header}</p>
-        <div className="flex w-[60%] gap-x-5 justify-center items-center">
+      <div className="hidden lg:flex flex-col w-full h-[6rem] justify-center items-center my-3">
+        <p className="text-xl aboutme-education-header-monitor mx-5 my-5">{education.header}</p>
+        <div className="flex w-[60%] gap-x-10 justify-center items-center aboutme-education-card-monitor scale-105">
           <CornerBox animateKey="college">
             <Card data={education.college} />
           </CornerBox>

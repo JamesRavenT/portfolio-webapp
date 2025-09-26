@@ -1,11 +1,25 @@
+/**
+ * Content.jsx
+ * Wrapper for the different layouts for AboutMe
+ * Finalized for v1.0.0 release
+ * Last Updated: 09/26
+ */
+
+import { motion } from 'framer-motion';
 import DesktopView from './layout/DesktopView';
 import MobileView from './layout/MobileView';
 
 export default function Content() {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+    >
       <MobileView />
       <DesktopView />
-    </>
+    </motion.div>
   );
 }

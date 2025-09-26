@@ -1,3 +1,10 @@
+/**
+ * CornerBox.jsx
+ * UI element that wraps the credentials
+ * Finalized for v1.0.0 release
+ * Last Updated: 09/26
+ */
+
 import { motion } from 'framer-motion';
 
 export default function CornerBox({ children, animateKey }) {
