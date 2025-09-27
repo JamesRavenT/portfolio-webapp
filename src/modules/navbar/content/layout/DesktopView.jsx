@@ -18,8 +18,8 @@ export default function DesktopView({ section, isOpen, toggleMenu }) {
     <aside className="hidden lg:flex fixed left-0 top-0 h-screen w-70 z-60 flex-col items-start">
       {/* Adjusts top padding based on active section */}
       <div
-        className={`flex flex-col m-5 transition-all duration-1000 ease-in-out ${
-          section !== '' ? 'pt-25' : 'pt-45'
+        className={`flex flex-col my-4 transition-all duration-1000 ease-in-out ${
+          section !== '' ? 'pt-25 ' : 'pt-45 mx-4'
         }`}
       >
         {/* Menu toggle button */}
@@ -31,7 +31,7 @@ export default function DesktopView({ section, isOpen, toggleMenu }) {
             style={{ originX: 0.5, originY: 0.5 }}
             className="w-14 h-14 flex items-center justify-center"
           >
-            <Menu size={70} />
+            <Menu size={50} />
           </motion.button>
         </div>
 
@@ -48,9 +48,9 @@ export default function DesktopView({ section, isOpen, toggleMenu }) {
             >
               <div className="flex">
                 {/* Scroll progress handle */}
-                <div className="mx-5 h-[60vh] w-0.5 bg-amber-50 relative">
+                <div className="mx-5 h-[60vh] w-0.25 bg-amber-50 relative">
                   <div
-                    className={`absolute left-0 w-2.5 bg-cyan-600 transition-transform duration-500 -translate-x-1 ${
+                    className={`absolute left-0 w-2 bg-cyan-600 transition-transform duration-500 -translate-x-1 ${
                       ScrollHandlePos[section] || ''
                     }`}
                     style={{ height: '3rem' }}
@@ -59,7 +59,7 @@ export default function DesktopView({ section, isOpen, toggleMenu }) {
 
                 {/* Section links */}
                 <div className="h-[60vh] flex-1">
-                  <ul className="flex flex-col mt-15 gap-y-17 text-xl font-electrolize [&>li]:w-30">
+                  <ul className="flex flex-col mt-15 gap-y-17 text-lg font-electrolize [&>li]:w-30">
                     <Sections section={section} />
                   </ul>
                 </div>

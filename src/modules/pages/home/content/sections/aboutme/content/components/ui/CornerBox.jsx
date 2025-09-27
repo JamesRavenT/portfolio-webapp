@@ -2,7 +2,7 @@
  * CornerBox.jsx
  * UI element that wraps the credentials
  * Finalized for v1.0.0 release
- * Last Updated: 09/26
+ * Last Updated: 09/27
  */
 
 import { motion } from 'framer-motion';
@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 export default function CornerBox({ children, animateKey }) {
   return (
     <motion.div
-      className="relative p-2 cursor-pointer" // wrapper is now motion-enabled
+      className="relative p-2 cursor-pointer hover:scale-105 transition-transform duration-500"
       whileHover="hover"
     >
       {/* Corners container */}

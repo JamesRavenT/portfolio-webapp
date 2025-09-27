@@ -16,10 +16,9 @@ import { ICO_Realm } from '../icons/ICO_Realm';
 import { ICO_SQLite } from '../icons/ICO_SQLite';
 import { ICO_Tailwind } from '../icons/ICO_Tailwind';
 import { ICO_VSCode } from '../icons/ICO_VSCode';
-import { ICO_Placeholder } from '../icons/ICO_Placeholder';
 
-// Slides data with icons directly
 const skillset = [
+  // WEB DEVELOPMENT
   {
     Icon: ICO_DevWebsite,
     title: 'Web Development',
@@ -33,10 +32,43 @@ const skillset = [
       { Icon: ICO_NodeJS, label: 'NodeJS' },
       { Icon: ICO_Git, label: 'Git' },
       { Icon: ICO_VSCode, label: 'VS Code' },
-      { Icon: ICO_Placeholder, label: '' },
-      ...Array(0).fill({ Icon: ICO_Placeholder, label: '-' }),
     ],
+    skillscat: [
+      {
+        label: 'Languages',
+        items : [
+          { Icon: ICO_HTML5, label: 'HTML5' },
+          { Icon: ICO_CSS3, label: 'CSS3' },
+          { Icon: ICO_Javascript, label: 'JavaScript' },
+        ]
+      }, 
+      
+      {
+        label: 'Frameworks and Libraries',
+        items : [
+           { Icon: ICO_Tailwind, label: 'Tailwind' },
+           { Icon: ICO_ReactJS, label: 'ReactJS' },
+           { Icon: ICO_NodeJS, label: 'NodeJS' },
+        ]
+      },
+
+      {
+        label: 'Version Control',
+        items : [
+           { Icon: ICO_Git, label: 'Git' },
+        ]
+      },
+
+      {
+        label: 'Tools/IDEs',
+        items : [
+          { Icon: ICO_VSCode, label: 'VSC' },
+        ]
+      },
+    ]
   },
+
+  // ANDROID DEVELOPMENT
   {
     Icon: ICO_DevAndroid,
     title: 'Android Development',
@@ -48,9 +80,41 @@ const skillset = [
       { Icon: ICO_FireStore, label: 'Firestore' },
       { Icon: ICO_Git, label: 'Git' },
       { Icon: ICO_AndroidSTD, label: 'AD Studio' },
-      ...Array(3).fill({ Icon: ICO_Placeholder, label: '-' }),
     ],
+    skillscat: [
+      {
+        label: 'Languages',
+        items: [
+          { Icon: ICO_Java, label: 'Java' },
+        ]
+      },
+
+      {
+        label: 'Databases',
+        items: [
+          { Icon: ICO_Realm, label: 'Realm' },
+          { Icon: ICO_SQLite, label: 'SQLite' },
+          { Icon: ICO_FireStore, label: 'Firestore' },
+        ]
+      },
+
+      {
+        label: 'Version Control',
+        items: [
+          { Icon: ICO_Git, label: 'Git' },
+        ]
+      },
+
+      {
+        label: 'Tools/IDEs',
+        items: [
+          { Icon: ICO_AndroidSTD, label: 'AS' },
+        ]
+      },
+    ]
   },
+
+  // SOFTWARE DEVELOPMENT
   {
     Icon: ICO_DevSoftware,
     title: 'Software Development',
@@ -58,9 +122,30 @@ const skillset = [
     skills: [
       { Icon: ICO_CPP, label: 'C++' },
       { Icon: ICO_QT, label: 'Qt' },
-      ...Array(7).fill({ Icon: ICO_Placeholder, label: '-' }),
     ],
+     skillscat: [
+      {
+        label: 'Languages',
+        items: [
+          { Icon: ICO_CPP, label: 'C++' },
+        ]
+      },
+
+      {
+        label: 'Tools/IDEs',
+        items: [
+          { Icon: ICO_QT, label: 'Qt' },
+        ]
+      },
+     ]
   },
 ];
 
-export { skillset };
+
+const labels = {
+  forte : 'Forte',
+  techstack : 'Technology Stack'
+
+}
+
+export { skillset, labels };

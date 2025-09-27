@@ -18,6 +18,9 @@ module.exports = {
       animation: {
         hint: 'hint 1.5s infinite',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],

@@ -65,8 +65,8 @@ export default function Education() {
       {/* Desktop */}
       <div className="hidden lg:flex flex-col w-full h-[6rem] justify-center items-center my-3">
         <p className="text-xl aboutme-education-header-monitor mx-5 my-5">{education.header}</p>
-        <div className="flex w-[60%] gap-x-10 justify-center items-center aboutme-education-card-monitor scale-105">
-          <CornerBox animateKey="college">
+        <div className="flex w-[60%] gap-x-10 justify-center items-center aboutme-education-card-monitor scale-105 ">
+          <CornerBox animateKey="college ">
             <Card data={education.college} />
           </CornerBox>
 
