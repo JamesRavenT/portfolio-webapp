@@ -1,10 +1,3 @@
-/**
- * App.jsx
- * Root application component with routing setup
- * Finalized for v1.0.0 release
- * Last Updated: 09/22
- */
-
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
@@ -12,7 +5,6 @@ import Navbar from './navbar/Navbar';
 import PageNotFound from './pages/_null/PageNotFound';
 
 export default function App() {
-  //State hook to manage the currently active section on the homepage
   const [section, setSection] = useState('');
 
   return (

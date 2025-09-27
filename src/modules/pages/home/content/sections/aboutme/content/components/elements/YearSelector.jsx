@@ -1,11 +1,3 @@
-/**
- * YearSelector.jsx
- * Year Selection Component that will show the appropriate academic history on the year finished. Available on Mobile View Only
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
-
 import { motion } from 'framer-motion';
 
 export default function YearSelector({ item, isActive, onSelect }) {

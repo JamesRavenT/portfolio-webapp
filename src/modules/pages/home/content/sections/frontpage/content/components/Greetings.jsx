@@ -1,10 +1,3 @@
-/**
- * Greetings.jsx
- * Welcome Message in the Frontpage. Only available in DesktopView
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import { greetings } from '../../../../_data/frontpage';
 
 export default function Greetings() {

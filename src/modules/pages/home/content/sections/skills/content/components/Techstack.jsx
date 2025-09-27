@@ -1,10 +1,3 @@
-/**
- * Techstack.jsx
- * Component that houses the technologies used within a Forte.
- * Finalized for v1.0.0 release
- * Last Updated: 09/27
- */
-
 import { motion, AnimatePresence } from 'framer-motion';
 import { labels, skillset } from '../../../../_data/skills';
 import SkillIcon from './ui/SkillIcon';
@@ -14,26 +7,26 @@ export default function Techstack({ index }) {
   const currentSlide = skillset[index];
 
   const containerVariants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.05, // delay between each category
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.05,
+      },
     },
-  },
-};
+  };
 
-const categoryVariants = {
-  hidden: { opacity: 0, x: 700 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.1, ease: 'easeOut' },
-  },
-};
+  const categoryVariants = {
+    hidden: { opacity: 0, x: 700 },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.1, ease: 'easeOut' },
+    },
+  };
 
   return (
     <>
-      {/** MOBILE VIEW */}
+      {}
       <div className="lg:hidden flex flex-col relative justify-center items-center w-full gap-y-5 overflow-hidden">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
@@ -54,7 +47,7 @@ const categoryVariants = {
                 {labels.techstack}
               </p>
             </div>
-            {/** RENDER SKILL ICONS */}
+            {}
             <div className="grid grid-cols-3 lg:grid-cols-4 gap-x-3 lg:gap-x-2 gap-y-4 lg:gap-y-7 place-items-center w-full">
               {currentSlide.skills.map(({ Icon, label }, i) => (
                 <SkillIcon key={i} Icon={Icon} label={label} />
@@ -64,20 +57,20 @@ const categoryVariants = {
         </AnimatePresence>
       </div>
 
-      {/** DESKTOP VIEW */}
+      {}
       <div className="hidden lg:flex flex-col w-full h-full mt-45 gap-y-2 scale-95 skills-techstacks-monitor">
-        {/** TECHNOLOGY STACK LABEL */}
+        {}
         <div className="flex py-2 items-center bg-gradient-to-r from-cyan-800 via-cyan-800/40 to-transparent rounded-md">
           <ICO_Tech className="size-8 ml-3 mr-1 rotate-45" />
           <p className="text-3xl">{labels.techstack}</p>
         </div>
 
-        {/** TECHNOLOGY STACK CATEGORIES */}
+        {}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          key={currentSlide.title} // re-triggers on index change
+          key={currentSlide.title}
           className="flex flex-col gap-y-2"
         >
           {currentSlide.skillscat?.map((category, catIndex) => (
@@ -99,7 +92,7 @@ const categoryVariants = {
             </motion.div>
           ))}
         </motion.div>
-    </div>
+      </div>
     </>
   );
 }

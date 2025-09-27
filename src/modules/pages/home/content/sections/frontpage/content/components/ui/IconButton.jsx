@@ -1,10 +1,3 @@
-/**
- * IconButton.jsx
- * UI element for the icons
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 export default function IconButton({
   Icon,
   src,

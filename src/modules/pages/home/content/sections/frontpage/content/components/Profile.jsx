@@ -1,10 +1,3 @@
-/**
- * Profile.jsx
- * Button Link to my Resume via Google Docs. Only Available in the Mobile View
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import { IdCard } from 'lucide-react';
 import { resume } from '../../../../_data/frontpage';
 

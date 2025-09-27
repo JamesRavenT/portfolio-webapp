@@ -1,10 +1,3 @@
-/**
- * DesktopView.jsx
- * Desktop Layout for Frontpage
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import Headline from '../components/Headline';
 import Greetings from '../components/Greetings';
 import SocialLinks from '../components/SocialLinks';

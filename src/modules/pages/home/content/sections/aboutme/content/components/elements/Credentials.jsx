@@ -1,11 +1,3 @@
-/**
- * Credentials.jsx
- * Credentials of an Academic Background/Degree
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
-
 export default function Credentials({ data }) {
   return (
     <>

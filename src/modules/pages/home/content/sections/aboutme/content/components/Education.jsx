@@ -1,10 +1,3 @@
-/**
- * Education.jsx
- * Education Component that states academic background.
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { education } from '../../../../_data/aboutme';
@@ -22,7 +15,7 @@ export default function Education() {
 
   return (
     <>
-      {/* Mobile */}
+      {}
       <div className="lg:hidden flex flex-col items-center w-full gap-y-3 mt-5 ">
         <hr className="w-[90%] border-0.5" />
         <p className="text-sm self-start mx-5">{education.header}</p>
@@ -62,9 +55,11 @@ export default function Education() {
         </CornerBox>
       </div>
 
-      {/* Desktop */}
+      {}
       <div className="hidden lg:flex flex-col w-full h-[6rem] justify-center items-center my-3">
-        <p className="text-xl aboutme-education-header-monitor mx-5 my-5">{education.header}</p>
+        <p className="text-xl aboutme-education-header-monitor mx-5 my-5">
+          {education.header}
+        </p>
         <div className="flex w-[60%] gap-x-10 justify-center items-center aboutme-education-card-monitor scale-105 ">
           <CornerBox animateKey="college ">
             <Card data={education.college} />

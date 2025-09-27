@@ -1,10 +1,3 @@
-/**
- * PageMarker.jsx
- * Indicator of which Forte is the user viewing. Only available in Mobile View
- * Finalized for v1.0.0 release
- * Last Updated: 09/27
- */
-
 import { useState } from 'react';
 
 export default function PageMarker({ index, setIndex, skillset = [] }) {

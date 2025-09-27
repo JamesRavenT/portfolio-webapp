@@ -1,10 +1,3 @@
-/**
- * main.css
- * Global stylesheet for the application
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
@@ -103,5 +96,28 @@ body {
 
   .skills-techstacks-monitor {
     margin-top: 15rem;
+  }
+
+  .projects-icon-size-monitor {
+    width: 80%;
+    transform: scale(1.15);
+  }
+
+  .projects-banner-size-monitor {
+    transform: scale(1.1);
+  }
+
+  .projects-description-size-monitor {
+    transform: scale(1.2);
+  }
+
+  .projects-carouselcontrol-space-monitor {
+    margin-bottom: 14rem;
+    transform: scale(1.1);
+  }
+
+  .contact-form-monitor {
+    margin-top: 7rem;
+    transform: scale(1.3);
   }
 }

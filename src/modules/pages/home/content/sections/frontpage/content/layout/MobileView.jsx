@@ -1,10 +1,3 @@
-/**
- * MobileView.jsx
- * Mobile and Tablet Layout for Frontpage
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import Profile from '../components/Profile';
 import Headline from '../components/Headline';
 import SocialLinks from '../components/SocialLinks';

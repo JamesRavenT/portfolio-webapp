@@ -6,7 +6,7 @@ export default function ContactForm() {
     email: '',
     message: '',
   });
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [status, setStatus] = useState('idle'); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,14 +37,14 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-12">
-      <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-center">
+    <section className="bg-black text-white mx-5 flex flex-col  px-2 contact-form-monitor">
+      <p className="text-xl lg:text-5xl font-bold mb-8 text-center">
         Interested? Leave a message
-      </h2>
+      </p>
 
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-xl flex flex-col gap-4 bg-gray-800 p-8 rounded-lg shadow-lg"
+        className="w-full flex flex-col gap-3 lg:gap-4 bg-gray-800 p-6 lg:p-8 rounded-xs shadow-lg"
       >
         <input
           type="text"
@@ -53,7 +53,7 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="Your Name"
           required
-          className="p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          className="p-3 rounded-xs bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
         />
         <input
           type="email"
@@ -62,16 +62,16 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="Your Email"
           required
-          className="p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          className="p-3 rounded-xs bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
         />
         <textarea
           name="message"
           value={formData.message}
           onChange={handleChange}
           placeholder="Your Message"
-          rows={5}
+          rows={7}
           required
-          className="p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          className="p-3 rounded-xs bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
         />
         <button
           type="submit"

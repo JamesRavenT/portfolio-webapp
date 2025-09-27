@@ -13,6 +13,7 @@ import { ICO_Realm } from '../icons/ICO_Realm';
 
 function project(
   name,
+  icon,
   imageMB,
   imagePC,
   version,
@@ -24,6 +25,7 @@ function project(
 ) {
   return {
     name,
+    icon,
     imageMB,
     imagePC,
     version,
@@ -45,19 +47,21 @@ const label = {
 const projects = {
   wazabipos: project(
     'WazabiPOS',
-    '/images/projects/wazabiposMB.png',
-    '/images/projects/wazabiposPC.png',
+    '/images/projects/wazabipos/wazabiposICO.png',
+    '/images/projects/wazabipos/wazabiposMB.png',
+    '/images/projects/wazabipos/wazabiposPC.png',
     'v1.0.0',
     'March 2023',
     'Completed',
     [ICO_Android],
     [ICO_Java, ICO_Realm, ICO_FireStore, ICO_AndroidSTD, ICO_Git],
-    'My final year project was a mobile POS integrated with a machine learning algorithm to track consumer behavior and send insights to the business website. It highlights frequently bought-together meal combinations while providing core POS features, inventory management, and sales forecasting.',
+    'My final year project. A mobile POS integrated with a machine learning algorithm to track consumer behavior. It highlights frequent meal combinations while providing core POS features, such as inventory management, and sales forecasting.',
   ),
-  wazabipos2: project(
+  portfolio: project(
     'Portfolio',
-    '/images/projects/portfolioMB.png',
-    '/images/projects/portfolioPC.png',
+    '/images/projects/portfolio/portfolioICO.png',
+    '/images/projects/portfolio/portfolioMB.png',
+    '/images/projects/portfolio/portfolioPC.png',
     'v1.0.0',
     'September 2025',
     'Released - Active Updates',

@@ -1,10 +1,3 @@
-/**
- * Profile.jsx
- * Clickable QR Link to my Resume via Google Docs. Only Available in the Desktop View.
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import { resume } from '../../../../_data/frontpage';
 
 export default function ResumeQR() {

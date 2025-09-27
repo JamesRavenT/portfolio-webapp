@@ -1,10 +1,3 @@
-/**
- * LinkToContactForm.jsx
- * Clickable text that will redirect the user to the Contact Form Section.
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import { useScroll } from '../../../../../../../../_hooks/useScroll';
 import { labels } from '../../../../_data/frontpage';
 

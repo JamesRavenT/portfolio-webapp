@@ -1,24 +1,41 @@
 import Carousel from '../components/Carousel';
+import CarouselControls from '../components/elements/CarouselControl';
+import ProjectBanner from '../components/ProjectBanner';
 import ProjectDetails from '../components/ProjectDetails';
+import ProjectIcon from '../components/ui/ProjectIcon';
 
 export default function DesktopView({
   images,
   currentProject,
   currentIndex,
-  setCurrentIndex,
+  direction,
+  next,
+  prev,
+  goTo,
 }) {
   return (
-    <div className="hidden md:flex flex-col items-center h-[100vh] w-full pt-25 gap-y-3 font-electrolize">
-      <div className="flex h-full w-screen content-center items-center ">
+    <div className="hidden lg:flex flex-col items-center h-[100vh] w-full gap-y-3 font-electrolize">
+      <div className="flex absolute h-full w-screen content-center items-center z[-99]">
         <Carousel
           images={images}
           currentIndex={currentIndex}
-          setCurrentIndex={setCurrentIndex}
+          direction={direction}
+          next={next}
+          prev={prev}
+          goTo={goTo}
         />
       </div>
-
-      <div className="flex h-[80vh] w-[35rem] translate-y-[4%] right-5 absolute ">
-        <ProjectDetails project={currentProject} />
+      <div className="flex h-full w-full">
+        <ProjectDetails
+          project={currentProject}
+          currentIndex={currentIndex}
+          images={images}
+          goTo={goTo}
+          next={next}
+          prev={prev}
+        />
+        <ProjectIcon index={currentIndex} />
+        <ProjectBanner project={currentProject} index={currentIndex} />
       </div>
     </div>
   );

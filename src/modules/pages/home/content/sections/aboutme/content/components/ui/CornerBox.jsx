@@ -1,10 +1,3 @@
-/**
- * CornerBox.jsx
- * UI element that wraps the credentials
- * Finalized for v1.0.0 release
- * Last Updated: 09/27
- */
-
 import { motion } from 'framer-motion';
 
 export default function CornerBox({ children, animateKey }) {
@@ -13,9 +6,9 @@ export default function CornerBox({ children, animateKey }) {
       className="relative p-2 cursor-pointer hover:scale-105 transition-transform duration-500"
       whileHover="hover"
     >
-      {/* Corners container */}
+      {}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Top-left horizontal */}
+        {}
         <motion.span
           key={animateKey + '-tl-h'}
           className="absolute top-0 left-0 h-0.5 bg-white"
@@ -24,7 +17,7 @@ export default function CornerBox({ children, animateKey }) {
           variants={{ hover: { width: '1.5rem' } }}
           transition={{ duration: 0.4 }}
         />
-        {/* Top-left vertical */}
+        {}
         <motion.span
           key={animateKey + '-tl-v'}
           className="absolute top-0 left-0 w-0.5 bg-white"
@@ -34,7 +27,7 @@ export default function CornerBox({ children, animateKey }) {
           transition={{ duration: 0.4, delay: 0.1 }}
         />
 
-        {/* Top-right */}
+        {}
         <motion.span
           key={animateKey + '-tr-h'}
           className="absolute top-0 right-0 h-0.5 bg-white"
@@ -52,7 +45,7 @@ export default function CornerBox({ children, animateKey }) {
           transition={{ duration: 0.4, delay: 0.1 }}
         />
 
-        {/* Bottom-left */}
+        {}
         <motion.span
           key={animateKey + '-bl-h'}
           className="absolute bottom-0 left-0 h-0.5 bg-white"
@@ -70,7 +63,7 @@ export default function CornerBox({ children, animateKey }) {
           transition={{ duration: 0.4, delay: 0.1 }}
         />
 
-        {/* Bottom-right */}
+        {}
         <motion.span
           key={animateKey + '-br-h'}
           className="absolute bottom-0 right-0 h-0.5 bg-white"
@@ -89,7 +82,7 @@ export default function CornerBox({ children, animateKey }) {
         />
       </div>
 
-      {/* Content */}
+      {}
       <div className="relative z-10">{children}</div>
     </motion.div>
   );

@@ -1,10 +1,3 @@
-/**
- * MobileView.jsx
- * Mobile and Tablet Layout for AboutMe
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import Catchphrase from '../components/Catchphrase';
 import Description from '../components/Description';
 import Education from '../components/Education';

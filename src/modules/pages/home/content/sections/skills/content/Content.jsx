@@ -1,10 +1,3 @@
-/**
- * Content.jsx
- * Wrapper for the different layouts for Skills
- * Finalized for v1.0.0 release
- * Last Updated: 09/27
- */
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -14,7 +7,7 @@ import DesktopView from './layout/DesktopView';
 import MobileView from './layout/MobileView';
 
 export default function Content() {
-  const [[index, direction], setIndex] = useState([0, 0]); // index + direction
+  const [[index, direction], setIndex] = useState([0, 0]);
   const paginate = (dir) => {
     setIndex(([prevIndex]) => [
       paginateUtil(prevIndex, dir, skillset.length - 1),

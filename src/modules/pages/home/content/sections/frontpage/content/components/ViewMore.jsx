@@ -1,10 +1,3 @@
-/**
- * ViewMore.jsx
- * Clickable, blinking button to go to the next section below. Only Available in Mobile View.
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import { ChevronsDown } from 'lucide-react';
 import { useScroll } from '../../../../../../../../_hooks/useScroll';
 

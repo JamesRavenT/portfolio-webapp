@@ -1,10 +1,3 @@
-/**
- * MobileView.jsx
- * Mobile navigation component
- * Finalized for v1.0.0 release
- * Last Updated: 09/22
- */
-
 import { Menu } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useMenuScrollRestrictions } from '../_hooks/useMenuScrollRestrictions';
@@ -14,7 +7,6 @@ import { ScrollHandle } from '../components/ScrollHandle';
 import Sections from '../components/Sections';
 
 export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
-  //State Hooks
   useMenuScrollRestrictions(isOpen);
   useMenuCloseIfTop(section, setIsOpen);
   useMenuCloseIfEsc(setIsOpen);
@@ -22,7 +14,7 @@ export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
   return (
     <nav className="lg:hidden fixed top-0 left-0 w-full flex items-center justify-between px-4 py-3 z-50">
       <div className="flex items-center gap-x-2 mr-auto">
-        {/* Mobile menu button */}
+        {}
         <AnimatePresence mode="wait">
           {section && section !== 'contacts' && (
             <motion.button
@@ -39,7 +31,7 @@ export default function MobileView({ section, isOpen, setIsOpen, toggleMenu }) {
           )}
         </AnimatePresence>
 
-        {/* Slide-in mobile menu panel */}
+        {}
         <AnimatePresence>
           {isOpen && (
             <motion.div

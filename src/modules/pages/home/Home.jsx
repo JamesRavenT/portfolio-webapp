@@ -16,7 +16,6 @@ export default function Home({ section, setSection }) {
     useScroll();
   const refs = [frontpageRef, aboutmeRef, skillsRef, projectsRef, contactsRef];
 
-  // Hooks
   useSmoothScrollSnap(containerRef, refs);
   useSectionObserver(refs, setSection);
 

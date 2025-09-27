@@ -1,10 +1,3 @@
-/**
- * SkillIcon.jsx
- * Reusable Component that houses the TechStack Icons.
- * Finalized for v1.0.0 release
- * Last Updated: 09/27
- */
-
 export default function SkillIcon({ Icon, label }) {
   return (
     <div

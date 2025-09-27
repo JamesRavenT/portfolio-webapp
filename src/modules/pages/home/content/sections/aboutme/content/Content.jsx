@@ -1,10 +1,3 @@
-/**
- * Content.jsx
- * Wrapper for the different layouts for AboutMe
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import { motion } from 'framer-motion';
 import DesktopView from './layout/DesktopView';
 import MobileView from './layout/MobileView';

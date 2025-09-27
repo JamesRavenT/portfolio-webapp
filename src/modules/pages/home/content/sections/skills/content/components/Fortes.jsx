@@ -1,10 +1,3 @@
-/**
- * Fortes.jsx
- * Categories of Skills
- * Finalized for v1.0.0 release
- * Last Updated: 09/27
- */
-
 import { motion, AnimatePresence } from 'framer-motion';
 import { useWindowSizeChecker } from '../../../../_hooks/useWindowSizeChecker';
 import { getVariants } from '../../../../_utils/variants';
@@ -12,12 +5,11 @@ import { createDragEndHandler } from '../../../../_utils/dragHandlers';
 import { skillset } from '../../../../_data/skills';
 import SkillTree from './ui/SkillTree';
 import PageMarker from './PageMarker';
-import HighlightBorder from './ui/HighlightBorder';
 
 export default function Fortes({ index, direction, setIndex, paginate }) {
   const isDesktop = useWindowSizeChecker(768);
   const variants = getVariants(isDesktop);
-  const { Icon, title } = skillset[index];  
+  const { Icon, title } = skillset[index];
   const handleDragEnd = createDragEndHandler({
     index,
     slidesLength: skillset.length,
@@ -27,7 +19,7 @@ export default function Fortes({ index, direction, setIndex, paginate }) {
 
   return (
     <>
-      {/** MOBILE VIEW */}
+      {}
       <div className="lg:hidden flex flex-col mt-15 items-center justify-center w-full">
         <div className="relative flex justify-center items-center w-full overflow-hidden">
           <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -44,16 +36,15 @@ export default function Fortes({ index, direction, setIndex, paginate }) {
               onDragEnd={handleDragEnd}
               className="w-full"
             >
-              <SkillTree Icon={Icon} title={title}/>
+              <SkillTree Icon={Icon} title={title} />
             </motion.div>
           </AnimatePresence>
         </div>
         <PageMarker index={index} setIndex={setIndex} skillset={skillset} />
       </div>
 
-      {/** DESKTOP VIEW */}
+      {}
       <div className="hidden lg:flex flex-col items-center justify-center w-[70%] mt-10 skills-forte-icon-monitor">
-        <HighlightBorder>
         <div className="relative flex items-center justify-center">
           <div className="flex items-center justify-center overflow-hidden ">
             <AnimatePresence mode="wait" initial={false} custom={direction}>
@@ -72,7 +63,6 @@ export default function Fortes({ index, direction, setIndex, paginate }) {
             </AnimatePresence>
           </div>
         </div>
-        </HighlightBorder>
       </div>
     </>
   );

@@ -1,10 +1,3 @@
-/**
- * useMenuCloseIfTop.js
- * Custom hook to close a menu when the at the top section of the page
- * Finalized for v1.0.0 release
- * Last Updated: 09/22
- */
-
 const ScrollHandlePos = {
   '': 'translate-y-10 lg:translate-y-10 2xl:translate-y-14',
   'About Me': 'translate-y-26 lg:translate-y-32 2xl:translate-y-38',

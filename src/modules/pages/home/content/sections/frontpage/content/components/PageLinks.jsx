@@ -1,10 +1,3 @@
-/**
- * PageLinks.jsx
- * Navigation links for sections in the Mobile View
- * Finalized for v1.0.0 release
- * Last Updated: 09/26
- */
-
 import { useScroll } from '../../../../../../../../_hooks/useScroll';
 import { sections } from '../../../../_data/frontpage';
 

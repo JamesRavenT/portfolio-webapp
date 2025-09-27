@@ -1,27 +1,49 @@
-export default function CarouselControls({ currentIndex, total, onSelect }) {
-  return (
-    <div className="absolute top-145 bottom-0 left-4 flex w-100 items-center gap-6 z-100">
-      {/* Project Code */}
-      <span className="text-white text-4xl lg:text-6xl font-bold tracking-wider">
-        PRJCT-{String(currentIndex + 1).padStart(2, '0')}
-      </span>
+import CarouselFloatingBtn from './CarouselButton';
 
-      {/* Indicators */}
-      <div className="flex gap-5">
+export default function CarouselControls({
+  currentIndex,
+  total,
+  onSelect,
+  next,
+  prev,
+}) {
+  return (
+    <div className="flex flex-col w-90 gap-6 mt-auto ml-auto mb-30 z-[99] projects-carouselcontrol-space-monitor">
+      {}
+      <div className="flex gap-2">
         {Array.from({ length: total }).map((_, idx) => (
           <button
             key={idx}
             onClick={() => onSelect(idx)}
             className={`
-              w-4 h-4 transition-all duration-300
+              w-full h-1 transition-all duration-300
               ${
                 idx === currentIndex
-                  ? 'bg-white rotate-45 scale-110'
-                  : 'bg-gray-500 hover:bg-gray-300 rotate-0'
+                  ? 'bg-white'
+                  : 'bg-gray-500 hover:bg-gray-300 '
               }
             `}
           />
         ))}
+      </div>
+
+      {}
+      <div className="flex w-full">
+        <span className="text-white text-xl font-bold mt-1">
+          PRJCT-{String(currentIndex + 1).padStart(2, '0')}
+        </span>
+        <div className="flex ml-auto">
+          <CarouselFloatingBtn
+            direction="prev"
+            onClick={prev}
+            active={currentIndex > 0}
+          />
+          <CarouselFloatingBtn
+            direction="next"
+            onClick={next}
+            active={currentIndex < total.length - 1}
+          />
+        </div>
       </div>
     </div>
   );

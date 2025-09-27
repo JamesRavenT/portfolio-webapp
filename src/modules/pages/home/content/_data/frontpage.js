@@ -38,7 +38,7 @@ const linkedIn = {
   text: 'LinkedIn',
   color: 'bg-[#0A66C2]',
   icon: ICO_LinkedIn,
-  link: 'https://www.linkedin.com/in/jamesravent/',
+  link: 'https://linkedin.com/in/jamesravent/',
   altlink: 'linkedin.com/in/jamesravent/',
   openLink: () => window.open(linkedIn.link, '_blank'),
 };
