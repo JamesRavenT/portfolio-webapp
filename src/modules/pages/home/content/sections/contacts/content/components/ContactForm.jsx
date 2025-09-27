@@ -6,7 +6,7 @@ export default function ContactForm() {
     email: '',
     message: '',
   });
-  const [status, setStatus] = useState('idle'); 
+  const [status, setStatus] = useState('idle');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
