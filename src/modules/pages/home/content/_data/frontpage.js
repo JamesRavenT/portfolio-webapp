@@ -21,7 +21,7 @@ const resume = {
   text2: 'SCAN TO VIEW',
   text3: '- RESUME -',
   qr: '/images/resume-qr.png',
-  link: 'https://docs.google.com/document/d/1dzSsqBpjQZ5WDe_AOqP2Ozee79v5ErxAYpsefPGlhRA/edit?tab=t.0',
+  link: 'https://docs.google.com/document/d/1lUKldIVLyyL4wP6495KltbxkwdZ8qXEmFYL_uAmDxPo/edit?tab=t.0',
   openLink: () => window.open(resume.link, '_blank'),
 };
 

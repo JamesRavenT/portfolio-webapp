@@ -9,3 +9,7 @@ export default function Skills() {
     </div>
   );
 }
+
+
+// TO UPDATED
+// MAKE THE CONTENTS SCROLLABLE TO LEFT AND RIGHT NAD THE WINDOW TO BE SCROLLABLE  TOo
