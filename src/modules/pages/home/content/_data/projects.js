@@ -62,8 +62,8 @@ const projects = {
     '/images/projects/intellitask/intellitaskPC.png',
     [ICO_DevWebsite],
     [ICO_HTML5, ICO_CSS3, ICO_Javascript, ICO_Typescript, ICO_NodeJS, ICO_NextJS, ICO_ReactJS, ICO_Supabase, ICO_n8n, ICO_Git, ICO_VSCode],
-    'An AI-powered project assistant that generates tasks and project roadmaps, with automated Google Calendar scheduling and Trello card creation through n8n workflows Own website containing information about me, skills, and projects that I had and have been working on.',
-  ),
+    'An AI-powered project assistant that generates tasks and project roadmaps, with automated Google Calendar scheduling and Trello card creation through n8n workflows'
+  )
 };
 
 export { label, projects };
