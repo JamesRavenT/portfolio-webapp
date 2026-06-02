@@ -8,7 +8,7 @@ const wallpaper = {
 const headlines = {
   greeting: "Hello, I'm",
   name: 'Raven',
-  role: 'Aspiring Software Developer',
+  role: 'Aspiring AI Engineer',
 };
 
 const greetings = {

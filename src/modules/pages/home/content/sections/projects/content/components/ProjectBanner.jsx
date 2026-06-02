@@ -3,7 +3,7 @@ import ProjectHeader from './elements/ProjectHeader';
 
 export default function ProjectBanner({ project, index }) {
   return (
-    <div className="flex flex-col z-[99] mt-auto mb-auto w-full gap-y-2 projects-banner-size-monitor">
+    <div className="flex flex-col z-[99] mt-auto mb-auto ml-auto w-full gap-y-2 projects-banner-size-monitor">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}

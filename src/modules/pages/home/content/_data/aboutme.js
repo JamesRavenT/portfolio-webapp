@@ -1,15 +1,14 @@
 const catchphrase = {
-  line1: '\"Since day one, ',
-  line2: 'Coding has been part of my story.\"',
+  line1: '\"The spark that never faded\"',
 };
 
 const description = {
   paragraphs: [
-    `I discovered programming back in 8th grade, which led me through a programming strand in senior high school and a Computer Science degree. That early spark still drives me today, shaping how I approach challenges and continuous learning.`,
+    `I discovered programming in 8th grade, a passion that led me through a programming strand in senior high school and a Computer Science degree. That early curiosity still drives me today, shaping how I approach problem-solving, software development, and emerging technologies like AI.`,
+    
+    `I've built projects ranging from my college thesis to personal creations such as Discord bots, automation tools, and small applications designed to solve real-world problems. Along the way, my experience in customer service strengthened my adaptability, communication, and resilience—skills I bring into every project.`,
 
-    `I’ve built projects ranging from my college thesis to personal creations like Discord bots and small tools for friends. Alongside that, my experience in customer service taught me adaptability, communication, and resilience—skills I now bring into software development.`,
-
-    `I may not yet have professional industry experience, but I bring years of curiosity, persistence, and dedication. For me, coding isn’t just a career path—it’s a lifelong craft I’m eager to grow in and share through meaningful work.`,
+    `While I am still building professional industry experience, I bring years of curiosity, persistence, and continuous learning. Whether developing software or exploring AI-driven solutions, I am passionate about creating meaningful technology and growing as a developer.`
   ],
 };
 

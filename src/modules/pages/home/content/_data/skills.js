@@ -24,8 +24,40 @@ import { ICO_Tailwind } from '../icons/ICO_Tailwind';
 import { ICO_Trello } from '../icons/ICO_Trello';
 import { ICO_VS } from '../icons/ICO_VS';
 import { ICO_VSCode } from '../icons/ICO_VSCode';
+import { ICO_DevAI } from '../icons/ICO_DevAI';
+import { ICO_Typescript } from '../icons/ICO_Typescript';
+import { ICO_NextJS } from '../icons/ICO_NextJS';
+import { ICO_Python } from '../icons/ICO_Python';
+import { ICO_n8n } from '../icons/ICO_n8n';
+import { ICO_Supabase } from '../icons/ICO_Supabase';
+import { ICO_SQL } from '../icons/ICO_SQL';
 
 const skillset = [
+  {
+    Icon: ICO_DevAI,
+    title: 'AI Development',
+    skills: [
+      { Icon: ICO_DevAI, label: 'AI Development' },
+    ],
+    skillscat: [
+      {
+        label: 'Languages',
+        items: [
+          { Icon: ICO_Python, label: 'Python' },
+          { Icon: ICO_Javascript, label: 'Javascript' },
+        ],
+        
+      },
+      {
+        label: 'Tools',
+        items: [
+          { Icon: ICO_n8n, label: 'n8n' },
+          { Icon: ICO_Git, label: 'Git' },
+          { Icon: ICO_VSCode, label: 'VSC' }
+        ],
+      }
+    ],
+  },
   {
     Icon: ICO_DevWebsite,
     title: 'Web Development',
@@ -46,6 +78,7 @@ const skillset = [
           { Icon: ICO_HTML5, label: 'HTML5' },
           { Icon: ICO_CSS3, label: 'CSS3' },
           { Icon: ICO_Javascript, label: 'JavaScript' },
+          { Icon: ICO_Typescript, label: 'TypeScript' },
         ],
       },
 
@@ -53,16 +86,26 @@ const skillset = [
         label: 'Libraries & Frameworks',
         items: [
           { Icon: ICO_Tailwind, label: 'Tailwind' },
+          { Icon: ICO_NextJS, label: 'NextJS' },
           { Icon: ICO_ReactJS, label: 'ReactJS' },
           { Icon: ICO_NodeJS, label: 'NodeJS' },
         ],
       },
 
       {
+        label: 'Databases',
+        items: [
+          { Icon: ICO_Supabase, label: 'Supabase' },
+          { Icon: ICO_SQL, label: 'SQL' },
+        ],
+      },
+
+      {
         label: 'Tools',
         items: [
+          { Icon: ICO_VSCode, label: 'VSCode' },
           { Icon: ICO_Git, label: 'Git' },
-          { Icon: ICO_VSCode, label: 'VSC' }
+          
         ],
       },
     ],

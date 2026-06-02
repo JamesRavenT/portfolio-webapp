@@ -23,10 +23,6 @@ export default function ProjectDetails({
       {}
       <div className="lg:hidden relative flex flex-col h-full w-full px-5 z-20 pt-36 bg-gradient-to-t from-black via-black/99 to-transparent gap-y-2">
         <ProjectHeader project={project} />
-        <div className="grid grid-cols-2 gap-x-4 mt-1">
-          <ProjectStatus project={project} />
-          <LastChanges project={project} />
-        </div>
         <Technologies project={project} />
         <Divider />
         <ProjectDescription project={project} label={label} />
@@ -46,11 +42,6 @@ export default function ProjectDetails({
               <div className="flex flex-col ml-1 pl-2 border-l-5 ">
                 <ProjectDescription project={project} label={label} />
               </div>
-            </div>
-            <hr className="w-90 border-0.5 mt-3 ml-auto" />
-            <div className="grid grid-cols-2 w-90 ml-auto ">
-              <ProjectStatus project={project} />
-              <LastChanges project={project} />
             </div>
             <hr className="w-90 border-0.5 mt-2 ml-auto" />
             <div className="ml-auto w-90">

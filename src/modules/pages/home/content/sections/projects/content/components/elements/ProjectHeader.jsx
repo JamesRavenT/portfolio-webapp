@@ -14,20 +14,18 @@ export default function ProjectHeader({ project }) {
         </div>
       </div>
       {}
-      <div className="hidden lg:flex items-center gap-x-2 lg:gap-x-4 lg:mt-2">
-        <p className="text-gray-300 text-sm lg:text-2xl">{project.version}</p>
-        <div className="h-full w-0.5 bg-gray-400 lg:h-8" />
-        {}
-        <div className="flex gap-2 ">
-          {project.platform.map((Icon, idx) => (
-            <Icon key={idx} className="size-7 text-blue-400" />
-          ))}
-        </div>
+      <hr className="hidden lg:flex w-full h-[100%] border-1 m-2 ml-2"/>
+      <div className="hidden lg:flex gap-4 items-center ml-2">
+        <div className="flex  items-center">
+            {project.platform.map((Icon, idx) => (
+              <Icon key={idx} className="size-15 text-blue-400" />
+            ))}
+          </div>
+          <div className="h-full w-0.5 bg-white lg:h-15" />
+        <p className="hidden lg:flex w-full text-7xl font-bold text-white">
+          {project.name}
+        </p>
       </div>
-      <hr className="hidden lg:flex w-full border-1 m-2 ml-auto" />
-      <p className="hidden lg:flex w-full text-7xl font-bold text-white">
-        {project.name}
-      </p>
     </>
   );
 }
